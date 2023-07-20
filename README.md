@@ -40,8 +40,8 @@ Githubサイト右上の+マークからNew Repositoryを選択し、Repository�
 
 ## Github上のRepositoryに初めてローカルからpushする
   #### Github上で行うこと
-  アクセストークンをsetteings >> Developer Settings >> personal access tokens >> Tokens(classic)から取ってくる
-  Personal Access tokens が保存されていなければ、自分で作る
+  アクセストークンをGithubサイト上のsetteings >> Developer Settings >> personal access tokens >> Tokens(classic)から取ってくる
+  <br> Personal Access tokens が保存されていなければ、自分で作る
   
   #### 自分のPCで行うこと
   1. ターミナル(コマンドプロンプト)を開き、github上に載せたいファイル直下で``` git init ```を実行する
@@ -50,15 +50,19 @@ Githubサイト右上の+マークからNew Repositoryを選択し、Repository�
        <br> もし```On branch main```ではなく```On branch master```だったら、mainにしておくとよい。（名前を統一できるから）
 
   2. コミット（変更保存。ブランチに変更保存履歴ノードを作成）する。
-     必要に応じて``` git status ```で状況を確認しながら、
-     * ```git add . ``` ：変更ありファイルをトラッキング
-     * ``` git commit -m "コミット名 "```：ファイルをコミットする（ブランチの状況を保存できるyo）
-     * ``` git log ``` を実行して、コミットの履歴を見てちゃんとコミットできてるか確認する。
-  3. ローカルPCとリモートURLの紐づけを行う
-      * ```git remote add リモートリポジトリURL ``` : リモートリポジトリとローカルリポジトリを紐づける!
+     <br> 必要に応じて``` git status ```で状況を確認しながら、
+     ```
+       git add . ：変更ありファイルをトラッキング
+       git commit -m "コミット名 "：ファイルをコミットする（ブランチの状況を保存できるyo）
+       git log : コミットの履歴を見てちゃんとコミットできてるか確認
+     ```
+  4. ローカルPCとリモートURLの紐づけを行う
+      * ``` git remote add リモートリポジトリURL ``` : リモートリポジトリとローカルリポジトリを紐づける!
       * 以下の例は、このリポジトリの場合。
-      * ex1. ``` git remote add origin https:micklan2367:Personal Access Token//github.com/mickylan2367/github_practice.git``` (パーソナルアクセストークンを使用する場合)
-      * ex2. ``` git remote add origin https://github.com/mickylan2367/github_practice.git ```（パーソナルアクセストークンを使用しない場合--こっちの方が簡単）
+        ```
+        ex1. git remote add origin https:micklan2367:Personal Access Token//github.com/mickylan2367/github_practice.git``` (パーソナルアクセストークンを使用する場合)
+        ex2. git remote add origin https://github.com/mickylan2367/github_practice.git （パーソナルアクセストークンを使用しない場合--こっちの方が簡単）
+        ```
       * Personal Access Token：Githubから取ったAccess tokenを入力する
       * user_name: 自分のアカウント名
   
