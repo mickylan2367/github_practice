@@ -35,6 +35,10 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 VSCodeで既に作成したコードが手元にある。これをgithub上に作った自分のレポジトリに載せたり、削除したりする。
 <br>gitはインストール、初期設定済み (git については<a href="https://youtu.be/6SLMB7BPG9E">この動画が分かりやすい</a>)
 
+## リポジトリの見方
+![image](https://github.com/mickylan2367/github_practice/assets/83509964/4de3f472-dabd-4d19-ba7d-4ba53f09d867)
+ファイル名、そのファイルが変更された最新のコミット名、コミット時刻の順番で並んでいる
+
 ## Github上でRepositoryを作る
 Githubサイト右上の+マークからNew Repositoryを選択し、Repositoryの名前とPubric/Privateを選択してレポジトリを作成する
 
