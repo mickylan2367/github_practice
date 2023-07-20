@@ -110,9 +110,11 @@ Githubサイト右上の+マークからNew Repositoryを選択し、Repository�
       <br> ex. ``` git push -u origin main ```
       <br> 参考：Github公式リファレンスは<a href ="https://docs.github.com/ja/get-started/using-git/pushing-commits-to-a-remote-repository">こちら</a>
 
-## Tagの付け方(製品のバージョン管理みたいなことができるよ!
+## Tagの付け方(製品のバージョン管理みたいなことができるよ!)
 * ``` git tag -a タグ変数 -m 'タグの名称' ``` : タグに名前を付ける（```ex. git push origin v1.0```）
 * ``` git push origin タグ変数 ```: タグをプッシュ（```ex. git push origin v1.0 ```）
 * タグのネーミングは<a href="https://semver.org/lang/ja/">セマンティックなんちゃら</a>を参照するといいらしい？
-* 参考：gitの<a href = " https://git-scm.com/book/en/v2/Git-Basics-Tagging">公式リファレンス</a>
+
+参考：
+* gitの <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">公式リファレンス</a>
 * <a href = "https://qiita.com/tommy_aka_jps/items/5b39e4b27364c759aa53">Qiita</a>を参照
