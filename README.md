@@ -2,7 +2,7 @@
 Githubの使い方の練習memo帳
 （環境）
 VSCodeで書いたコードをgithub上に作った自分のレポジトリに載せたり、削除したりする。
-gitはインストール、初期設定済み
+<br>gitはインストール、初期設定済み
 
 ## Github上でRepositoryを作る方法
 ## Github上のRepositoryに初めてローカルからpushする方法
