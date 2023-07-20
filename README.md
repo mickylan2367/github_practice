@@ -23,6 +23,7 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
     <li>用語解説</li>
     <li>概要</li>
     <li>筆者の現在の環境</li>
+    <li>Github上のリモートリポジトリの見方</li>
     <li>リモートリポジトリを作成</li>
     <li>初めてローカルリポジトリの内容をリモートリポジトリにpushする</li>
     <li>参考資料</li>
@@ -35,7 +36,7 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 VSCodeで既に作成したコードが手元にある。これをgithub上に作った自分のレポジトリに載せたり、削除したりする。
 <br>gitはインストール、初期設定済み (git については<a href="https://youtu.be/6SLMB7BPG9E">この動画が分かりやすい</a>)
 
-## リポジトリの見方
+## Github上のリモートリポジトリの見方
 ![image](https://github.com/mickylan2367/github_practice/assets/83509964/4de3f472-dabd-4d19-ba7d-4ba53f09d867)
 ファイル名、そのファイルが変更された最新のコミット名、コミット時刻の順番で並んでいる
 
