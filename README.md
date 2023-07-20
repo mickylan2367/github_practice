@@ -48,10 +48,22 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
       <br> git logを実行して、コミットの履歴を見てちゃんとコミットできてるか確認する。
     </li>
     <li>
-      git remote add <リモートリポジトリの名前><リモートリポジトリURL> : リモートリポジトリとローカルリポジトリを紐づける!
-      <br> ex. git remote add origin https:micklan2367:Personal Access Token//github.com/mickylan2367/github_practice.git
+      git remote add リモートリポジトリURL : リモートリポジトリとローカルリポジトリを紐づける!
+      <br> 以下の例は、このリポジトリの場合。
+      <br> ex1. git remote add origin https:micklan2367:Personal Access Token//github.com/mickylan2367/github_practice.git(パーソナルアクセストークンを使用する場合)
+      <br> ex2. git remote add origin https://github.com/mickylan2367/github_practice.git（パーソナルアクセストークンを使用しない場合--こっちの方が簡単）
       <br> Personal Access Token：Githubから取ったAccess tokenを入力する
       <br> user_name: 自分のアカウント名
+      <section>
+        ここで発生したエラーが2個
+        <ol>
+          <li>![image](https://github.com/mickylan2367/github_practice/assets/83509964/712a3182-0070-4d57-861f-4ecd82f0bb36)</li>
+          <li>回避方法：とりあえずアクセストークンを使用しないURLにリモートリポジトリを紐づけし直す</li>
+          <li>参考：<a href="https://stacktuts.com/how-to-fix-git-error-please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists">サイト</a></li>
+          <li>![image](https://github.com/mickylan2367/github_practice/assets/83509964/a9fd9b1e-f2bc-4217-9bbf-83e97fdddd58)</li>
+          <li>参考：<a href="https://qiita.com/mei28/items/85bc881ac1f26332ac15">サイト</a></li>
+        </ol>
+      </section>
     </li>
     <li>
       git push -u リポジトリ名 ローカルブランチ名：リモートブランチ名：リモートのブランチにローカルブランチをアップロード
