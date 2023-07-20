@@ -106,6 +106,7 @@ Githubサイト右上の+マークからNew Repositoryを選択し、Repository�
   4. ``` git push -u リポジトリ名 ローカルブランチ名：リモートブランチ名```：リモートのブランチにローカルブランチをアップロード
       <br> ex. ``` git push -u origin main:main```
       <br> ＊ 1でブランチ名を変更していない場合、ローカルブランチ名がmasterの場合もあるので注意
-      <br> ＊ローカルブランチ名とリモートブランチ名が同じ場合は、どちらか一方のみ書けばいい。ex. ``` git push -u origin main ```
+      <br> ＊ローカルブランチ名とリモートブランチ名が同じ場合は、どちらか一方のみ書けばいい。
+      <br> ex. ``` git push -u origin main ```
       <br> 参考：Github公式リファレンスは<a href ="https://docs.github.com/ja/get-started/using-git/pushing-commits-to-a-remote-repository">こちら</a>
 
