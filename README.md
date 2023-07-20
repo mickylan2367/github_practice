@@ -44,7 +44,7 @@ Githubサイト右上の+マークからNew Repositoryを選択し、Repository�
   Personal Access tokens が保存されていなければ、自分で作る
   
   #### 自分のPCで行うこと
-  1. github上に載せたいファイル直下で``` git init ```を実行する
+  1. ターミナル(コマンドプロンプト)を開き、github上に載せたいファイル直下で``` git init ```を実行する
      * ``` git status ``` で現在のブランチの名前を確認する。
      * ```git branch -m main```とターミナルで実行してローカルレポジトリのメインブランチの名前を確認する。
        <br> もし```On branch main```ではなく```On branch master```だったら、mainにしておくとよい。（名前を統一できるから）
