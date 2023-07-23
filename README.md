@@ -3,7 +3,7 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 
 ## 目次
   <ol>
-    <li><a href="https://github.com/mickylan2367/github_practice.git#参考資料">参考資料</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#参考資料">参考資料</a></li>
     <li>用語解説</li>
     <li>概要</li>
     <li>筆者の現在の環境</li>
