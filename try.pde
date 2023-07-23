@@ -5,11 +5,18 @@ void setup()
   background(0,255,0);
 }
 
-void draw(){
+void draw()
+{
   Hexagon(3, 3, 6);
   flower();
-
-  for(float i=0;i<8;i+= 0.01){
+  
+  for(float i=0;i<8;i+= 0.01)
+  {
     Triangle(width/2, height/2, i);
   }
-}
+  
+  for(int i=0;i<5;i++)
+  {
+     Heart(width/2, height/2, i);
+   }
+ }
