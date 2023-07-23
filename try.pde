@@ -7,4 +7,5 @@ void setup()
 
 void draw(){
   Hexagon(3, 3, 6);
+  flower();
 }
