@@ -56,8 +56,9 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 
 #### ターミナルでブランチを確認する方法
 * gitで管理されているファイル直下に移動し、ターミナルで``` git branch -a ```と打つ。
-   ![image](https://github.com/mickylan2367/github_practice/assets/83509964/b290dfe4-7585-4fa3-9361-41180a03d306)
-  <br> 因みに、``` git branch ```とだけ打つとローカルリポジトリ（自分のPC）に存在しているブランチ(上のスクリーンショットだと、頭にremotes/originと表記されていないブランチ。)だけ確認できる
+  <br> 現在位置は、先頭に※が付いている + 緑で表示される。下の図の場合はmainブランチにいることが分かる。
+   ![image](https://github.com/mickylan2367/github_practice/assets/83509964/b5b0a5d2-8e02-474b-b747-1dcd6af19c73)
+  <br> 因みに、``` git branch ```とだけ打つとローカルリポジトリ（自分のPC）に存在しているブランチ（上の図だと、頭にremotes/originと表記されていないブランチ。）だけが表示される。
 
 <br>
 
