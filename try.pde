@@ -8,4 +8,8 @@ void setup()
 void draw(){
   Hexagon(3, 3, 6);
   flower();
+
+  for(int i=0;i<5;i++){
+     Heart(width/2, height/2, i);
+  }
 }
