@@ -29,6 +29,7 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
   <li>マークダウン記法1：<a href="https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">githubのリファレンス</a></li>
   <li>マークダウンの記法 2: <a href="https://qiita.com/Kotabrog/items/fb328b72ac94137897af#:~:text=%E8%89%B2%E3%80%85%E3%81%A8%E8%AA%BF%E3%81%B9%E3%81%9F%E7%B5%90%E6%9E%9C%E3%80%81%E3%81%93%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA%E5%9F%BA%E7%A4%8E%E6%A7%8B%E6%88%90%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%20%23%20name%20image%20or%20gif%20%23%23%20Overview,Author%20%5Btwitter%5D%20%28https%3A%2F%2Ftwitter.com%2FKotabrog%29%20%23%23%20Licence%20%5BMIT%5D%20%28https%3A%2F%2F......%29%20%E5%BF%85%E8%A6%81%E3%81%8C%E3%81%82%E3%82%8C%E3%81%B0%E3%80%81%E3%81%93%E3%82%8C%E3%81%AB%E4%BB%98%E3%81%91%E5%8A%A0%E3%81%88%E3%81%A6%E3%81%84%E3%81%8F%E6%84%9F%E3%81%98%E3%81%A7%E3%81%99%E3%80%82">参考サイト（Qiita）</a></li>
    <li>マークダウンの記法 3: <a href="https://qiita.com/mozuku_com/items/db430bcb66fd1bbc5c49#7-mermaid%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">参考サイト（Qiita）</a></li>
+  <li>マークダウン画像サイズ調整：<a href = "https://shinshin86.hateblo.jp/entry/2021/09/12/084848#:~:text=image%20resize%20in%20github%20flavored%20markdown.%20%C2%B7%20GitHub,%3C%2Fp%3E%20%E2%80%BB%E3%81%A1%E3%81%AA%E3%81%BF%E3%81%AB%20p%20%E3%82%BF%E3%82%B0%E3%81%AB%E4%BB%98%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%20align%3D%22center%22%20%E3%81%AF%20text-align%3Acenter%3B%20%E3%81%A8%E5%90%8C%E3%81%98%E3%82%82%E3%81%AE%E3%80%82">参考サイト</a></li>
 </ul>
 
 <br>
@@ -180,6 +181,14 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 ## Issuesの使い方
 * Issuesは非同期でみんなが編集しているとき、課題の割り当て、ブランチの作成を行う。
-<ol>
-  <li></li>
-</ol>
+#### Issuesの目次
+1. Issues >> ``` New Issues(黄緑のボタン) ``` を選択
+2. Issuesのタイトルと内容詳細を書いて``` Submit new issue ```を選択 </li>
+![image](https://github.com/mickylan2367/github_practice/assets/83509964/99adf234-5c39-4bda-8c85-e9443e10f1d5)
+3. 同ページ右の```Assignees```でこのIssueを解決する人を割り当てる。（ここでは、とりあえず```assign youself```を選択している）</li>
+4. ```Assignees```と同じ列下にある```Development```から```Create a branch```を選択</li>
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/a4b18b90-1716-45e9-8ea9-7891a6b8a5b0" alt="AssigneesとDevelopment" width="400px">
+</p>
+
+
