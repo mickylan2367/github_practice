@@ -4,13 +4,13 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 ## 目次
   <ol>
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#参考資料">参考資料</a></li>
-    <li>用語解説</li>
-    <li>概要</li>
-    <li>筆者の現在の環境</li>
-    <li>Githubの見方</li>
-    <li>Github上でリモートリポジトリを作成し、初めてローカルからpushする</li>
-    <li>タグの付け方</li>
-    <li>Issuesの使い方</li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#用語解説">用語解説</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#概要">概要</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#筆者の現在の環境">筆者の現在の環境</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Githubの見方">Githubの見方</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Github上でリモートリポジトリを作成し、初めてローカルからpushする">Github上でリモートリポジトリを作成し、初めてローカルからpushする</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#タグの付け方">タグの付け方</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Issuesの使い方">Issuesの使い方</a></li>
     <li></li>
   </ol>
 
