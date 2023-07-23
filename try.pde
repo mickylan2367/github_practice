@@ -5,7 +5,7 @@ void setup()
   background(0,255,0);
 }
 
-void draw()
-{
+void draw(){
+  Hexagon(3, 3, 6);
   flower();
 }
