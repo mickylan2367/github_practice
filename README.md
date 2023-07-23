@@ -71,7 +71,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 ## Githubの見方
 ![image](https://github.com/mickylan2367/github_practice/assets/83509964/16990050-d72e-4347-bac6-47c9c9e49038)
-* <>Code：ファイル名、そのファイルが変更された最新のコミット名、コミット時刻の順番で並んでいる
+* ファイル名、そのファイルが変更された最新のコミット名、コミット時刻の順番で並んでいる
 * コミット名をクリックすると、コミットの変更点を確認できる。
   <br> 下の図の緑の領域(+)は、このコミットによって追加されたコードを示す。
 <br> ![image](https://github.com/mickylan2367/github_practice/assets/83509964/12243b75-c76f-4ca7-92b8-921d875f6fce)
@@ -81,6 +81,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 #### 他の機能
 ![image](https://github.com/mickylan2367/github_practice/assets/83509964/c007689b-012a-417c-a561-fb2b0c28cd78)
+* <>Code: さっき説明した場所。ファイルやブランチ、コミット履歴が確認できる
 * ☉Issues：非同期でチーム開発中に課題を見つけたら、ここに課題を書いて誰が解決するか担当を割り当てる。
   <br> ブランチを作成してコードを編集する。
 * Pull Requests: 開発したブランチをdevelopにマージする。コンフリクトが生じたらこれを解消する。
@@ -113,7 +114,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
       * ``` git remote add リモートリポジトリURL ``` : リモートリポジトリとローカルリポジトリを紐づける!
       * 以下の例は、このリポジトリの場合。
         ```
-        ex1. git remote add origin https:micklan2367:Personal Access Token//github.com/mickylan2367/github_practice.git (パーソナルアクセストークンを使用する場合)
+        ex1. git remote add origin https:<user_name>:<Personal Access Token>@github.com/mickylan2367/github_practice.git (パーソナルアクセストークンを使用する場合)
         ex2. git remote add origin https://github.com/mickylan2367/github_practice.git （パーソナルアクセストークンを使用しない場合--こっちの方が簡単）
         ```
       * Personal Access Token：Githubから取ったAccess tokenを入力する
@@ -166,7 +167,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 <br>
 
 ## Tagの付け方(製品のバージョン管理みたいなことができるよ!)
-* ``` git tag -a タグ変数 -m 'タグの名称' ``` : タグに名前を付ける（```ex. git push origin v1.0```）
+* ``` git tag -a タグ変数 -m 'タグの名称' ``` : タグに名前を付ける（```ex. git tag -a v1.0 -m 'v1.0.0'```）
 * ``` git push origin タグ変数 ```: タグをプッシュ（```ex. git push origin v1.0 ```）
 * タグのネーミングは<a href="https://semver.org/lang/ja/">セマンティックなんちゃら</a>を参照するといいらしい？
 
@@ -177,7 +178,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 <br>
 
 ## Issuesの使い方
-* Issuesは非同期でみんなが編集しているとき、課題の割り当て、ブランチの作成、コンフリクトの解消を行う場所。
+* Issuesは非同期でみんなが編集しているとき、課題の割り当て、ブランチの作成を行う。
 <ol>
   <li></li>
 </ol>
