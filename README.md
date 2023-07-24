@@ -1,16 +1,17 @@
 # github_practice
 Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
+<br> memo : 面倒くさかったので、Gitの基本操作（VSCode上でのgit操作も含む）は全て3. 概要で説明することにした(;'∀')
 
 ## 目次
   <ol>
-    <li>参考資料</li>
-    <li>用語解説</li>
-    <li>概要</li>
-    <li>筆者の現在の環境</li>
-    <li>Githubの見方</li>
-    <li>Github上でリモートリポジトリを作成し、初めてローカルからpushする</li>
-    <li>タグの付け方</li>
-    <li>Issuesの使い方</li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#参考資料">参考資料</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#用語解説">用語解説</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#概要">概要</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#筆者の現在の環境">筆者の現在の環境</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Githubの見方">Githubの見方</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Github上でリモートリポジトリを作成し、初めてローカルからpushする">Github上でリモートリポジトリを作成し、初めてローカルからpushする</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#タグの付け方">タグの付け方</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Issuesの使い方">Issuesの使い方</a></li>
     <li></li>
   </ol>
 
@@ -29,6 +30,7 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
   <li>マークダウン記法1：<a href="https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">githubのリファレンス</a></li>
   <li>マークダウンの記法 2: <a href="https://qiita.com/Kotabrog/items/fb328b72ac94137897af#:~:text=%E8%89%B2%E3%80%85%E3%81%A8%E8%AA%BF%E3%81%B9%E3%81%9F%E7%B5%90%E6%9E%9C%E3%80%81%E3%81%93%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA%E5%9F%BA%E7%A4%8E%E6%A7%8B%E6%88%90%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%20%23%20name%20image%20or%20gif%20%23%23%20Overview,Author%20%5Btwitter%5D%20%28https%3A%2F%2Ftwitter.com%2FKotabrog%29%20%23%23%20Licence%20%5BMIT%5D%20%28https%3A%2F%2F......%29%20%E5%BF%85%E8%A6%81%E3%81%8C%E3%81%82%E3%82%8C%E3%81%B0%E3%80%81%E3%81%93%E3%82%8C%E3%81%AB%E4%BB%98%E3%81%91%E5%8A%A0%E3%81%88%E3%81%A6%E3%81%84%E3%81%8F%E6%84%9F%E3%81%98%E3%81%A7%E3%81%99%E3%80%82">参考サイト（Qiita）</a></li>
    <li>マークダウンの記法 3: <a href="https://qiita.com/mozuku_com/items/db430bcb66fd1bbc5c49#7-mermaid%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">参考サイト（Qiita）</a></li>
+  <li>マークダウン画像サイズ調整：<a href = "https://shinshin86.hateblo.jp/entry/2021/09/12/084848#:~:text=image%20resize%20in%20github%20flavored%20markdown.%20%C2%B7%20GitHub,%3C%2Fp%3E%20%E2%80%BB%E3%81%A1%E3%81%AA%E3%81%BF%E3%81%AB%20p%20%E3%82%BF%E3%82%B0%E3%81%AB%E4%BB%98%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%20align%3D%22center%22%20%E3%81%AF%20text-align%3Acenter%3B%20%E3%81%A8%E5%90%8C%E3%81%98%E3%82%82%E3%81%AE%E3%80%82">参考サイト</a></li>
 </ul>
 
 <br>
@@ -37,7 +39,9 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 <ul>
   <li>リモートリポジトリ：github上のコードが保存されているURL。</li>
   <li>ローカルリポジトリ：自分のPCで、コードが保存されている場所</li>
-  <li>コミット：コード変更保存履歴。公式リファレンスによると、変更されたコードだけを保存しているのではなく、すべてのコードをノードとしてスクリーンショットしているような感じ？らしい。</li>
+  <li>ステージ：ローカルリポジトリで変更保存（コミット）する前に一時的に変更履歴を保存しておく場所</li>
+  <li>ワークツリー：編集中のファイルツリー（ローカルPC上）</li>
+  <li>コミット：コード変更保存履歴。公式リファレンスによると、変更されたコードだけを保存しているのではなく、すべてのコードをスクリーンショットしノードとして保存しているような感じ？らしい。</li>
   <li>ブランチ：機能別に編集したりするためにコード開発を分岐させることができる機能。</li>
   <li> remotes/develop ブランチ：製品を公開する前の開発中ブランチ</li>
   <li> remotes/origin/main ブランチ: 製品を公開しているリモートのメインブランチ。タグをつけてpushすると商品感が出る</li>
@@ -46,38 +50,98 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 <br>
 
 ## 概要
+#### 開発の流れ
 ざっくり流れはこんな感じ（あとで図を載せる）
+
+#### Git コマンド解説(ターミナルで操作)
+* ``` git add . ``` : ワークツリーからステージへ変更を一時保存
+* ``` git commit -m "コミット名" ``` : ステージからローカルリポジトリへ変更を一時保存
+* ``` git branch "ブランチ名" ``` : ブランチを作成
+  * ``` git branch ``` : ローカルリポジトリに存在するブランチをすべて表示
+  * ``` git branch -a ``` : リモートリポジトリ、ローカルリポジトリに存在するすべてのブランチを表示
+  * ``` git checkout -b "ブランチ名" ``` : ブランチを作成してそのブランチへ切り替える
+  * ``` git checkout "ブランチ名" ```: 指定したブランチに切り替える
+  * ``` git branch -d "ブランチ名"　```：指定したブランチを削除
+* ``` git pull ``` : 以下で紹介するfetchとmergeを一緒に行う。コンフリクトが起きているときはエラーが出ます。
+  * ``` git fetch [<options>] [<repository> [<refspec>…]] ```: repositoryで指定されたリポジトリから、ブランチやタグの情報を収集する。
+    <br> ex. ``` git fetch origin main ``` : remote/origin/mainからブランチやタグの情報を収集。
+  * ``` git merge [<options>][<repository> branch_name ] ```:ブランチを統合して一つにする。
+    <br> ex. ``` git merge origin main ```
+    <br> ``` git merge ```して使い終わったブランチは```git branch -d "ブランチ名"```で消すか、Github上の```pull requests```から```Delete Branch```で消す。
+* ``` git push ``` : ローカルリポジトリにあるブランチからリモートリポジトリにあるブランチへ、コードを同期する。
+
+<br>
+
+#### Github + VSCodeでGitを操作する場合
+ここまで色々書いたけど、ここからは一々コマンド全部自分で実行するのはめんどくさいよ(´;ω;｀)って方向けに。
+
+
+<br>
+
 #### Git Graph
 * VSCode上でGit Graphをインストールすると、綺麗なブランチとコミットの履歴を見ることができる。ただし、gitの操作した結果の反映には多少時間がかかる模様。
-  <br> ![image](https://github.com/mickylan2367/github_practice/assets/83509964/1d973dfd-4644-4cf9-9b9c-99c5b7a6bdf8) 左のタスクバーからSource Controlを探す。
-  <br> ![image](https://github.com/mickylan2367/github_practice/assets/83509964/bef0984c-e27d-4fea-97b7-fd6756327973) 上段右から2番目の変なマークを選択
-  <br> ![image](https://github.com/mickylan2367/github_practice/assets/83509964/daeaccd5-9152-42b2-9d89-671f7abc074f) Git Graph
+* Git Graphは以下の場所から表示できる。
+  <ol>
+    <li> 
+      左のタスクバーからSource Controlを選択。
+      <p align="left">
+      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/1d973dfd-4644-4cf9-9b9c-99c5b7a6bdf8" width="90px">
+      </p>
+    </li>
+    <li>
+      上段右から2番目の変なマークを選択。
+      <p align="left">
+      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/bef0984c-e27d-4fea-97b7-fd6756327973" width="200px">
+      </p>
+    </li>
+    <li>
+      <br> Git Graphが表示される。
+      <p align="left">
+      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/daeaccd5-9152-42b2-9d89-671f7abc074f" height="400px">
+      </p>
+    </li>
+  </ol>
 * 上の図のノード(点)がコミットの履歴で、縦の棒が各ブランチ。この図では分岐していたブランチがいったんピンクのブランチ(remotes/develop)に統合され、最終的に青のブランチ(remotes/origin/main)に統合されていく様子を示している。
 
 #### ターミナルでブランチを確認する方法
-* gitで管理されているファイル直下に移動し、ターミナルで``` git branch -a ```と打つ。
-   ![image](https://github.com/mickylan2367/github_practice/assets/83509964/b290dfe4-7585-4fa3-9361-41180a03d306)
-  <br> 因みに、``` git branch ```とだけ打つとローカルリポジトリ（自分のPC）に存在しているブランチ(上のスクリーンショットだと、頭にremotes/originと表記されていないブランチ。)だけ確認できる
+  gitで管理されているファイル直下に移動し、ターミナルで``` git branch -a ```と打つ。
+  <br> 現在位置は、先頭に※が付いている + 緑で表示される。下の図の場合はmainブランチにいることが分かる。
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/b5b0a5d2-8e02-474b-b747-1dcd6af19c73" height="300px">
+  </p>
+  
+  <br> 因みに、``` git branch ```とだけ打つとローカルリポジトリ（自分のPC）に存在しているブランチ（上の図だと、頭にremotes/originと表記されていないブランチ。）だけが表示される。
 
 <br>
 
 ## 筆者の現在の環境
 VSCodeで既に作成したコードが手元にある。これをgithub上に作った自分のレポジトリに載せたり、削除したりする。
 <br>gitはインストール、初期設定済み (git については<a href="https://youtu.be/6SLMB7BPG9E">この動画</a>が分かりやすい)
-<br>また、VSCode上でgithubにログイン済み
+<br>また、VSCode上でgithubにログイン済み。サインインしているかはVSCodeの「アカウント」で確認できる。
+<p align="center">
+<img src="https://github.com/mickylan2367/github_practice/assets/83509964/9f829233-9e30-4c6f-b4bd-c47c452e0983" height="200px">
+</p>
 
 <br>
 
 
 ## Githubの見方
-![image](https://github.com/mickylan2367/github_practice/assets/83509964/16990050-d72e-4347-bac6-47c9c9e49038)
+<p align="center">
+<img src="https://github.com/mickylan2367/github_practice/assets/83509964/16990050-d72e-4347-bac6-47c9c9e49038" width="800px">
+</p>
+
+* 左上の``` main ```はremote/origin/mainブランチにコミットされたプログラムを表示していることを示す。
+  <br> ブランチごとに選択してコードを確認できる
 * ファイル名、そのファイルが変更された最新のコミット名、コミット時刻の順番で並んでいる
 * コミット名をクリックすると、コミットの変更点を確認できる。
   <br> 下の図の緑の領域(+)は、このコミットによって追加されたコードを示す。
-<br> ![image](https://github.com/mickylan2367/github_practice/assets/83509964/12243b75-c76f-4ca7-92b8-921d875f6fce)
+  <br>
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/12243b75-c76f-4ca7-92b8-921d875f6fce" height="400px">
+  </p>
 * ファイル名をクリックし、History（右端）をクリックすると、そのファイルで行われたコミットの履歴が表示される。
   <br> コミット名をクリックすると、上記同様にコミットの変更したコードを確認できる
-![image](https://github.com/mickylan2367/github_practice/assets/83509964/5e25a1ad-3316-4eb4-a566-b297eb9b65d3)
+  ![image](https://github.com/mickylan2367/github_practice/assets/83509964/5e25a1ad-3316-4eb4-a566-b297eb9b65d3)
 
 #### 他の機能
 ![image](https://github.com/mickylan2367/github_practice/assets/83509964/c007689b-012a-417c-a561-fb2b0c28cd78)
@@ -99,17 +163,59 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   
   #### 自分のPCで行うこと
   1. ターミナル(コマンドプロンプト)を開き、github上に載せたいファイル直下で``` git init ```を実行する
-     * ``` git status ``` で現在のブランチの名前を確認する。
-     * ```git branch -m main```とターミナルで実行してローカルレポジトリのメインブランチの名前を確認する。
+     * ```git branch```とターミナルで実行してローカルレポジトリのメインブランチの名前を確認する。
        <br> もし```On branch main```ではなく```On branch master```だったら、mainにしておくとよい。（名前を統一できるから）
 
-  2. コミット（変更保存。ブランチに変更保存履歴ノードを作成）する。
+  2. コミットする。
      <br> 必要に応じて``` git status ```で状況を確認しながら、
      ```
-       git add . ：変更ありファイルをトラッキング
-       git commit -m "コミット名 "：ファイルをコミットする（ブランチの状況を保存できるyo）
+       git add . ：変更をステージに一時保存
+       git commit -m "コミット名 "：ファイルをコミットする。ステージからローカルリポジトリに変更履歴を保存
        git log : コミットの履歴を見てちゃんとコミットできてるか確認
      ```
+     * ちなみに、```git status ```<<``` git add . ``` <<``` git status ```の順でコマンドを実行すると、``` git add .```を実行する前には``` Changes not staged for commit ```と赤で表示されていたファイルが、実行後には``` Changes to be commited ```として緑で表示されていることが分かる。これはファイルがstageに一時保存されていることを示している。
+       <br> ![image](https://github.com/mickylan2367/github_practice/assets/83509964/25986d22-2254-4016-8652-5a17dfcb1105)
+       <br> ![image](https://github.com/mickylan2367/github_practice/assets/83509964/0149c17b-fd5f-4bc5-b02c-1d8c7f92b079)
+
+     #### git addや上書き保存で保存してしまった後に、コードを元に戻したい場合。
+      * 一度```git add . ```でワークツリーからステージに保存してしまったり、コミットしちゃったけど元に戻したいよというときは```git restore```を使用する。
+      * 例：ステージに上げる前、上書き保存しただけの段階でファイルを元に戻したいとき
+          <ol>
+          <li>
+            ファイルの内容を変更して、上書き保存（Ctrl + S）。
+            <p align="center">
+              <img src="https://github.com/mickylan2367/github_practice/assets/83509964/53886088-8127-4b86-9d89-3b4104104331" width="400px">
+            </p>
+          </li>
+          <li>
+            git statusとターミナルで打つと、上書き保存しても変更内容はまだステージには上がっていないことが分かる。
+             <p align="center">
+              <img src="https://github.com/mickylan2367/github_practice/assets/83509964/d1231661-4f57-4bf1-a428-fba080157589" width="800px">
+            </p>
+          </li>
+          <li>
+            この変更を取り消すには、git restore <ファイル名>をターミナルで実行。すると、上書き保存前に戻れます。
+             <p align="center">
+              <img src="https://github.com/mickylan2367/github_practice/assets/83509964/bf8d976f-7139-4011-a883-99a02154158e" width="800px">
+            </p>
+          </li>
+        </ol>    
+      * 例：ステージに保存後、コミットする前にファイルを元に戻したいとき
+        <ol>
+          <li>
+            ファイルの内容を変更して、git addした後git statusでステージの状態を確認すると
+            <p align="center">
+              <img src="https://github.com/mickylan2367/github_practice/assets/83509964/5a057522-d4bc-4438-a1c7-ef5eba85e000" width="800px">
+            </p>
+          </li>
+          <li>
+            この変更を取り消すには、一度--stagedで保存状態をstageからワークツリーに戻して、再度ワークツリーでの変更を消す
+             <p align="center">
+              <img src="https://github.com/mickylan2367/github_practice/assets/83509964/1fb3725f-594d-4fe0-b84b-641610fb36e3" width="800px">
+            </p>
+          </li>
+        </ol>
+        
   4. ローカルPCとリモートURLの紐づけを行う
       * ``` git remote add リモートリポジトリURL ``` : リモートリポジトリとローカルリポジトリを紐づける!
       * 以下の例は、このリポジトリの場合。
@@ -177,8 +283,69 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 <br>
 
-## Issuesの使い方
+## チーム開発のIssuesの使い方
+* ここでは、Issueを立ててブランチの作成し、VScode上で編集したファイルをコミットしてリモートリポジトリの同じ名前のブランチへpushするところまでを行う。
+##### ちょっとここで図解したほうが分かりやすいかも？
 * Issuesは非同期でみんなが編集しているとき、課題の割り当て、ブランチの作成を行う。
-<ol>
-  <li></li>
-</ol>
+1. Issues >> ``` New Issues(黄緑のボタン) ``` を選択
+2. Issuesのタイトルと内容詳細を書いて``` Submit new issue ```を選択 
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/99adf234-5c39-4bda-8c85-e9443e10f1d5" alt="AssigneesとDevelopment" width="600px">
+</p>
+
+4. 同ページ右の```Assignees```でこのIssueを解決する人を割り当てる。（ここでは、とりあえず```assign youself```を選択している）
+5. ```Assignees```と同じ列下にある```Development```から```Create a branch```を選択
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/a4b18b90-1716-45e9-8ea9-7891a6b8a5b0" alt="AssigneesとDevelopment" width="400px">
+</p>
+
+6. ブランチ名を編集して```Create Branch```を選択
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/8f61baee-506e-4170-9e20-14c431407729" alt="AssigneesとDevelopment" width="400px">
+</p>
+
+7. 下のようなポップアップ画面が出てくるので、コードをコピーします。
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/8812217c-2d36-4147-a0c7-10d667707b91" alt="AssigneesとDevelopment" width="700px">
+</p>
+
+8. VSCodeに戻りターミナルを開き、先ほどコピーしたコードを実行
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/eddcad72-3f28-41f6-bdbd-bf32e4dd6f1b" alt="AssigneesとDevelopment" width="700px">
+</p>
+
+9. ブランチ上でファイルを編集します。
+  <br> 注意：次の手順は10（ターミナルでコマンドを直接打つ）か11（VSCodeの機能を使用）のどちらかを選択してねb
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/eddcad72-3f28-41f6-bdbd-bf32e4dd6f1b" alt="AssigneesとDevelopment" width="700px">
+  </p>
+10. （11を行う場合は不要）ターミナル上でコマンドを打ってコミットする場合は、以下のように実行します
+  <br> コミットメッセージの名前の付け方はルールがあると便利。<a href="https://www.tam-tam.co.jp/tipsnote/program/post16686.html">参考サイト</a>
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/0de28e30-51cd-4b8d-ac9a-5758b236affe" alt="AssigneesとDevelopment" width="700px">
+  </p>
+
+11. （10を行った場合は不要）VSCode上のSource Controlを開き、```Changes```と書かれた場所のファイル名の横の```+```を選択する。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/7b2f2925-23f0-4308-a4d6-0ab533b7d4bc" height="200px">
+    </p>
+    
+    - 変更ファイルを```git add```する。ぶっちゃけこの手順は省いても（後で下のような警告は出てくるけど）OK
+      <br> 下の警告文の意味：「addせずにコミットしようとしているけど、変更ファイル全部ステージに上げて(```git add .```することと同じ。)からコミットしちゃってOKですか？」
+       <p align="center">
+      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/42c011d1-7d19-4f6f-aaf9-8318594fbc3d" height="200px">
+      </p>
+
+    - その後、コミットメッセージ(ここでは「Add : 花を追加」としている。)を記入して```☑Commit```を選択。
+      <br> コミットメッセージの付け方に注意しよう（詳しくは10の参考サイトをチェック）
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/6ce60e75-adf1-466e-9f9b-83d2cef6b406" height="200px">
+    </p>
+    
+    - コミットメッセージを記入せずに```☑Commit```ボタンを押してしまうと、以下のようなファイルが開いてコミットできない。
+      <br> この場合はコミットメッセージを記入してからもう一度コミットボタンを押す。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/9713f8f8-89d6-4d81-ad87-5efe2e380fc7" height="200px">
+    </p>
+
+
