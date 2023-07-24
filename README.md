@@ -50,19 +50,33 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 <br>
 
 ## 概要
+#### 開発の流れ
 ざっくり流れはこんな感じ（あとで図を載せる）
-#### Git コマンド解説
+
+#### Git コマンド解説(ターミナルで操作)
 * ``` git add . ``` : ワークツリーからステージへ変更を一時保存
 * ``` git commit -m "コミット名" ``` : ステージからローカルリポジトリへ変更を一時保存
 * ``` git branch "ブランチ名" ``` : ブランチを作成
+  * ``` git branch ``` : ローカルリポジトリに存在するブランチをすべて表示
+  * ``` git branch -a ``` : リモートリポジトリ、ローカルリポジトリに存在するすべてのブランチを表示
   * ``` git checkout -b "ブランチ名" ``` : ブランチを作成してそのブランチへ切り替える
   * ``` git checkout "ブランチ名" ```: 指定したブランチに切り替える
   * ``` git branch -d "ブランチ名"　```：指定したブランチを削除
-* ``` git pull ``` :
-  * ``` git fetch ```:
-  * ``` git merge ```:
-* ``` git push ``` :
+* ``` git pull ``` : 以下で紹介するfetchとmergeを一緒に行う。コンフリクトが起きているときはエラーが出ます。
+  * ``` git fetch [<options>] [<repository> [<refspec>…]] ```: repositoryで指定されたリポジトリから、ブランチやタグの情報を収集する。
+    <br> ex. ``` git fetch origin main ``` : remote/origin/mainからブランチやタグの情報を収集。
+  * ``` git merge [<options>][<repository> branch_name ] ```:ブランチを統合して一つにする。
+    <br> ex. ``` git merge origin main ```
+    <br> ``` git merge ```して使い終わったブランチは```git branch -d "ブランチ名"```で消すか、Github上の```pull requests```から```Delete Branch```で消す。
+* ``` git push ``` : ローカルリポジトリにあるブランチからリモートリポジトリにあるブランチへ、コードを同期する。
 
+<br>
+
+#### Github + VSCodeでGitを操作する場合
+ここまで色々書いたけど、ここからは一々コマンド全部自分で実行するのはめんどくさいよ(´;ω;｀)って方向けに。
+
+
+<br>
 
 #### Git Graph
 * VSCode上でGit Graphをインストールすると、綺麗なブランチとコミットの履歴を見ることができる。ただし、gitの操作した結果の反映には多少時間がかかる模様。
@@ -99,12 +113,14 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
   <br> 因みに、``` git branch ```とだけ打つとローカルリポジトリ（自分のPC）に存在しているブランチ（上の図だと、頭にremotes/originと表記されていないブランチ。）だけが表示される。
 
 <br>
-<br>
 
 ## 筆者の現在の環境
 VSCodeで既に作成したコードが手元にある。これをgithub上に作った自分のレポジトリに載せたり、削除したりする。
 <br>gitはインストール、初期設定済み (git については<a href="https://youtu.be/6SLMB7BPG9E">この動画</a>が分かりやすい)
-<br>また、VSCode上でgithubにログイン済み
+<br>また、VSCode上でgithubにログイン済み。サインインしているかはVSCodeの「アカウント」で確認できる。
+<p align="center">
+<img src="https://github.com/mickylan2367/github_practice/assets/83509964/9f829233-9e30-4c6f-b4bd-c47c452e0983" height="200px">
+</p>
 
 <br>
 
@@ -114,7 +130,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 <img src="https://github.com/mickylan2367/github_practice/assets/83509964/16990050-d72e-4347-bac6-47c9c9e49038" width="800px">
 </p>
 
-* 左上の``` main ```はremote/origin/mainブランチに保存された最新のコミットされたプログラムを表示していることを示す。
+* 左上の``` main ```はremote/origin/mainブランチにコミットされたプログラムを表示していることを示す。
   <br> ブランチごとに選択してコードを確認できる
 * ファイル名、そのファイルが変更された最新のコミット名、コミット時刻の順番で並んでいる
 * コミット名をクリックすると、コミットの変更点を確認できる。
@@ -267,16 +283,69 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 <br>
 
-## Issuesの使い方
+## チーム開発のIssuesの使い方
+* ここでは、Issueを立ててブランチの作成し、VScode上で編集したファイルをコミットしてリモートリポジトリの同じ名前のブランチへpushするところまでを行う。
+##### ちょっとここで図解したほうが分かりやすいかも？
 * Issuesは非同期でみんなが編集しているとき、課題の割り当て、ブランチの作成を行う。
-#### Issuesの目次
 1. Issues >> ``` New Issues(黄緑のボタン) ``` を選択
-2. Issuesのタイトルと内容詳細を書いて``` Submit new issue ```を選択 </li>
-![image](https://github.com/mickylan2367/github_practice/assets/83509964/99adf234-5c39-4bda-8c85-e9443e10f1d5)
-3. 同ページ右の```Assignees```でこのIssueを解決する人を割り当てる。（ここでは、とりあえず```assign youself```を選択している）</li>
-4. ```Assignees```と同じ列下にある```Development```から```Create a branch```を選択</li>
+2. Issuesのタイトルと内容詳細を書いて``` Submit new issue ```を選択 
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/99adf234-5c39-4bda-8c85-e9443e10f1d5" alt="AssigneesとDevelopment" width="600px">
+</p>
+
+4. 同ページ右の```Assignees```でこのIssueを解決する人を割り当てる。（ここでは、とりあえず```assign youself```を選択している）
+5. ```Assignees```と同じ列下にある```Development```から```Create a branch```を選択
 <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/a4b18b90-1716-45e9-8ea9-7891a6b8a5b0" alt="AssigneesとDevelopment" width="400px">
 </p>
+
+6. ブランチ名を編集して```Create Branch```を選択
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/8f61baee-506e-4170-9e20-14c431407729" alt="AssigneesとDevelopment" width="400px">
+</p>
+
+7. 下のようなポップアップ画面が出てくるので、コードをコピーします。
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/8812217c-2d36-4147-a0c7-10d667707b91" alt="AssigneesとDevelopment" width="700px">
+</p>
+
+8. VSCodeに戻りターミナルを開き、先ほどコピーしたコードを実行
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/eddcad72-3f28-41f6-bdbd-bf32e4dd6f1b" alt="AssigneesとDevelopment" width="700px">
+</p>
+
+9. ブランチ上でファイルを編集します。
+  <br> 注意：次の手順は10（ターミナルでコマンドを直接打つ）か11（VSCodeの機能を使用）のどちらかを選択してねb
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/eddcad72-3f28-41f6-bdbd-bf32e4dd6f1b" alt="AssigneesとDevelopment" width="700px">
+  </p>
+10. （11を行う場合は不要）ターミナル上でコマンドを打ってコミットする場合は、以下のように実行します
+  <br> コミットメッセージの名前の付け方はルールがあると便利。<a href="https://www.tam-tam.co.jp/tipsnote/program/post16686.html">参考サイト</a>
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/0de28e30-51cd-4b8d-ac9a-5758b236affe" alt="AssigneesとDevelopment" width="700px">
+  </p>
+
+11. （10を行った場合は不要）VSCode上のSource Controlを開き、```Changes```と書かれた場所のファイル名の横の```+```を選択する。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/7b2f2925-23f0-4308-a4d6-0ab533b7d4bc" height="200px">
+    </p>
+    
+    - 変更ファイルを```git add```する。ぶっちゃけこの手順は省いても（後で下のような警告は出てくるけど）OK
+      <br> 下の警告文の意味：「addせずにコミットしようとしているけど、変更ファイル全部ステージに上げて(```git add .```することと同じ。)からコミットしちゃってOKですか？」
+       <p align="center">
+      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/42c011d1-7d19-4f6f-aaf9-8318594fbc3d" height="200px">
+      </p>
+
+    - その後、コミットメッセージ(ここでは「Add : 花を追加」としている。)を記入して```☑Commit```を選択。
+      <br> コミットメッセージの付け方に注意しよう（詳しくは10の参考サイトをチェック）
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/6ce60e75-adf1-466e-9f9b-83d2cef6b406" height="200px">
+    </p>
+    
+    - コミットメッセージを記入せずに```☑Commit```ボタンを押してしまうと、以下のようなファイルが開いてコミットできない。
+      <br> この場合はコミットメッセージを記入してからもう一度コミットボタンを押す。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/9713f8f8-89d6-4d81-ad87-5efe2e380fc7" height="200px">
+    </p>
 
 
