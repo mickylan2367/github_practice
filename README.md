@@ -12,7 +12,7 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Github上でリモートリポジトリを作成し、初めてローカルからpushする">Github上でリモートリポジトリを作成し、初めてローカルからpushする</a></li>
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#タグの付け方">タグの付け方</a></li>
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Issuesの使い方">Issuesの使い方</a></li>
-    <li></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Pull Requestの使い方">Pull Requestの使い方</a></li>
   </ol>
 
 <br>
@@ -349,33 +349,74 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
     </p>
 
 12. (11の続き。10を行った人は飛ばしてください) コミットが行われると下のような画面に代わるので、``` Sync Changes ```を選択する。
-    <br> ポップアップ画面で表示される```OK```ボタンを押すと、ローカルリポジトリで編集中のブランチから、リモートブランチにある同じ名前のブランチにプッシュされる。
     <p align="center">
     <img src="https://github.com/mickylan2367/github_practice/assets/83509964/016c4e1b-5272-4ee2-9d0d-e66466df9540" height="150px">
     </p>
+    
+    - ポップアップ画面で表示される```OK```ボタンを押すと、ローカルリポジトリで編集中のブランチから、<b>リモートブランチにある同じ名前のブランチ</b>にプッシュされます。
     <p align="center">
     <img src="https://github.com/mickylan2367/github_practice/assets/83509964/44d28c8c-9c9e-4de9-8dbc-8a6f03c36188" height="120px">
     </p>
 
-13. Githubに戻ってpull requestで確認すると、マージされたブランチごとにポップアップが表示されている。
+
+<br>
+<br>
+
+## Pull Requestの使い方
+  * 前章ではIssueの使い方についてみてきけど、今度はその続きとしてPull Requestsの使い方を説明する。
+  * 基本的にPull Requestは航海されているプログラムでバグを発見した際、他の人が修正したコードを```remote/origin/main```や```remote/origin/develop```にマージする前に正常に動くコードしてマージできるかを確認するための機能。
+  * pythonのライブラリのコードも公開されていて、バグを見つけたらユーザがIssue/Pull Requestsを通してプログラムのバグを報告・修正・加筆することができる。
+
+13. Githubに戻ってpull request上を確認すると、マージされたブランチごとにポップアップが表示されている。
     <br> ```Compare & pull request```を選択する。
     <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/4687deea-4f8e-40b1-a37d-914c55f86a27" height="200px">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/4687deea-4f8e-40b1-a37d-914c55f86a27" width="800px">
     </p>
 
 14. マージ先のブランチ(```base:```)とマージするブランチ(```compare:```)を選択する。マージできる場合はブランチ選択場所の右に```Able to merge```を緑で表示される。
+    <br> ```Merge pull request```を選択。
     <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/033b9794-1590-4575-9b71-ae5ed1f9a603" height="120px">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/033b9794-1590-4575-9b71-ae5ed1f9a603" width="800px">
     </p>
 
     - マージできない場合は同じ場所に```Can't automecally merge.```と赤で表示される。
+      <br> このように表示された場合は上記同様```Merge pull request```を選択した後、手順18へ飛んでください。
     <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/591f4cd8-6479-4410-abd6-881513debaf3" height="150px">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/591f4cd8-6479-4410-abd6-881513debaf3" width="800px">
     </p>
 
-15. マージできる場合は
-    ![image](https://github.com/mickylan2367/github_practice/assets/83509964/80f8ad05-cfd6-43f9-9922-1adb03390275)
+16. マージできる場合は適宜コミット名を編集し、```Confirm merge```を選択
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/80f8ad05-cfd6-43f9-9922-1adb03390275" height="200px">
+    </p>
 
-17. 
-    
+17. 必要なくなったブランチは削除するため、```Delete Branch```を選択する。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/fe6d0fee-4794-458a-8c82-e7c336c4d032" width="800px">
+    </p>
 
+18. 解決し終わったIssuesは閉じておく。(Issuesに戻って```close issues```を選択)
+    <br> とりあえずこれで一通り編集修了！お疲れ様です。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/430e3e56-49de-4a02-9dd9-82a0088438f0" height="400px">
+    </p>
+
+20. 手順14でマージできないと表示された場合、コンフリクトを解消する必要があります。下の画面から```web editor```を選択
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/7118b28f-9ab6-42ae-bebc-6e3bd2d5fd57" width="700px">
+    </p>
+
+21. どこでコンフリクトが起きているかを表示してくれるので、コードを修正
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/ed5383b9-2ad1-4bd2-842d-4db3271c1fc1" width="600px">
+    </p>
+
+22. 編集し終わったら```Marked as resoled```を選択。編集結果がマージできそうなら下の画面のように、```Commit merge```と表示されるのでこれを選択
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/82cb7d02-1b66-4c98-95bf-b59b09828a4d" width="600px">
+    </p>
+
+23. コンフリクトが解消できて下の画面のように```Merge Pull Request```が表示されたら、手順15-18へ戻ります。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/06d4689f-d8b3-4579-9838-5ef545bfd547" width="600px">
+    </p>
