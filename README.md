@@ -327,19 +327,19 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 11. （10を行った場合は不要）VSCode上のSource Controlを開き、```Changes```と書かれた場所のファイル名の横の```+```を選択する。
     <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/7b2f2925-23f0-4308-a4d6-0ab533b7d4bc" height="200px">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/7b2f2925-23f0-4308-a4d6-0ab533b7d4bc" height="150px">
     </p>
     
     - 変更ファイルを```git add```する。ぶっちゃけこの手順は省いても（後で下のような警告は出てくるけど）OK
       <br> 下の警告文の意味：「addせずにコミットしようとしているけど、変更ファイル全部ステージに上げて(```git add .```することと同じ。)からコミットしちゃってOKですか？」
        <p align="center">
-      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/42c011d1-7d19-4f6f-aaf9-8318594fbc3d" height="200px">
+      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/42c011d1-7d19-4f6f-aaf9-8318594fbc3d" height="150px">
       </p>
 
     - その後、コミットメッセージ(ここでは「Add : 花を追加」としている。)を記入して```☑Commit```を選択。
       <br> コミットメッセージの付け方に注意しよう（詳しくは10の参考サイトをチェック）
     <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/6ce60e75-adf1-466e-9f9b-83d2cef6b406" height="200px">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/6ce60e75-adf1-466e-9f9b-83d2cef6b406" height="150px">
     </p>
     
     - コミットメッセージを記入せずに```☑Commit```ボタンを押してしまうと、以下のようなファイルが開いてコミットできない。
@@ -348,4 +348,34 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
     <img src="https://github.com/mickylan2367/github_practice/assets/83509964/9713f8f8-89d6-4d81-ad87-5efe2e380fc7" height="200px">
     </p>
 
+12. (11の続き。10を行った人は飛ばしてください) コミットが行われると下のような画面に代わるので、``` Sync Changes ```を選択する。
+    <br> ポップアップ画面で表示される```OK```ボタンを押すと、ローカルリポジトリで編集中のブランチから、リモートブランチにある同じ名前のブランチにプッシュされる。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/016c4e1b-5272-4ee2-9d0d-e66466df9540" height="150px">
+    </p>
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/44d28c8c-9c9e-4de9-8dbc-8a6f03c36188" height="120px">
+    </p>
+
+13. Githubに戻ってpull requestで確認すると、マージされたブランチごとにポップアップが表示されている。
+    <br> ```Compare & pull request```を選択する。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/4687deea-4f8e-40b1-a37d-914c55f86a27" height="200px">
+    </p>
+
+14. マージ先のブランチ(```base:```)とマージするブランチ(```compare:```)を選択する。マージできる場合はブランチ選択場所の右に```Able to merge```を緑で表示される。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/033b9794-1590-4575-9b71-ae5ed1f9a603" height="120px">
+    </p>
+
+    - マージできない場合は同じ場所に```Can't automecally merge.```と赤で表示される。
+    <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/591f4cd8-6479-4410-abd6-881513debaf3" height="150px">
+    </p>
+
+15. マージできる場合は
+    ![image](https://github.com/mickylan2367/github_practice/assets/83509964/80f8ad05-cfd6-43f9-9922-1adb03390275)
+
+17. 
+    
 
