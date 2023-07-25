@@ -19,5 +19,6 @@ void draw()
   {
      Heart(width/2, height/2, i);
    }
-   Heart(width/4, height/4, 4);
+  Heart(width/4, height/4, 4);
+  Heart(width/4, height/4, 4);
  }
