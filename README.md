@@ -285,16 +285,16 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 ## チーム開発のIssuesの使い方
 * ここでは、Issueを立ててブランチの作成し、VScode上で編集したファイルをコミットしてリモートリポジトリの同じ名前のブランチへpushするところまでを行う。
-##### ちょっとここで図解したほうが分かりやすいかも？
+### ちょっとここで図解したほうが分かりやすいかも？
 * Issuesは非同期でみんなが編集しているとき、課題の割り当て、ブランチの作成を行う。
-1. Issues >> ``` New Issues(黄緑のボタン) ``` を選択
-2. Issuesのタイトルと内容詳細を書いて``` Submit new issue ```を選択 
+#### 1. Issues >> ``` New Issues(黄緑のボタン) ``` を選択
+#### 2. Issuesのタイトルと内容詳細を書いて``` Submit new issue ```を選択 
 <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/99adf234-5c39-4bda-8c85-e9443e10f1d5" alt="AssigneesとDevelopment" width="600px">
 </p>
 
-4. 同ページ右の```Assignees```でこのIssueを解決する人を割り当てる。（ここでは、とりあえず```assign youself```を選択している）
-5. ```Assignees```と同じ列下にある```Development```から```Create a branch```を選択
+#### 3. 同ページ右の```Assignees```でこのIssueを解決する人を割り当てる。（ここでは、とりあえず```assign youself```を選択している）
+#### 4. ```Assignees```と同じ列下にある```Development```から```Create a branch```を選択
 <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/a4b18b90-1716-45e9-8ea9-7891a6b8a5b0" alt="AssigneesとDevelopment" width="400px">
 </p>
