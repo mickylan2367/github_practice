@@ -1,6 +1,7 @@
 # github_practice
 Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
-<br> memo : 面倒くさかったので、Gitの基本操作（VSCode上でのgit操作も含む）は全て3. 概要で説明することにした(;'∀')
+- memo : 面倒くさかったので、Gitの基本操作（VSCode上でのgit操作も含む）は全て3. 概要で説明することにした(;'∀')
+- 注意：GitとGithubの練習のために作ったものなので、このコードには特に意味はなく実行してもエラーを吐くと思います
 
 ## 目次
   <ol>
@@ -285,7 +286,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 ## チーム開発のIssuesの使い方
 * ここでは、Issueを立ててブランチの作成し、VScode上で編集したファイルをコミットしてリモートリポジトリの同じ名前のブランチへpushするところまでを行う。
-### ちょっとここで図解したほうが分かりやすいかも？
+  <!--ちょっとここで図解したほうが分かりやすいかも？-->
 * Issuesは非同期でみんなが編集しているとき、課題の割り当て、ブランチの作成を行う。
 #### 1. Issues >> ``` New Issues(黄緑のボタン) ``` を選択
 #### 2. Issuesのタイトルと内容詳細を書いて``` Submit new issue ```を選択 
@@ -299,64 +300,65 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/a4b18b90-1716-45e9-8ea9-7891a6b8a5b0" alt="AssigneesとDevelopment" width="400px">
 </p>
 
-6. ブランチ名を編集して```Create Branch```を選択
+#### 5. ブランチ名を編集して```Create Branch```を選択
 <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/8f61baee-506e-4170-9e20-14c431407729" alt="AssigneesとDevelopment" width="400px">
 </p>
 
-7. 下のようなポップアップ画面が出てくるので、コードをコピーします。
+#### 6. 下のようなポップアップ画面が出てくるので、コードをコピーします。
 <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/8812217c-2d36-4147-a0c7-10d667707b91" alt="AssigneesとDevelopment" width="700px">
 </p>
 
-8. VSCodeに戻りターミナルを開き、先ほどコピーしたコードを実行
+#### 7. VSCodeに戻りターミナルを開き、先ほどコピーしたコードを実行
 <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/eddcad72-3f28-41f6-bdbd-bf32e4dd6f1b" alt="AssigneesとDevelopment" width="700px">
 </p>
 
-9. ブランチ上でファイルを編集します。
+#### 8. ブランチ上でファイルを編集します。
   <br> 注意：次の手順は10（ターミナルでコマンドを直接打つ）か11（VSCodeの機能を使用）のどちらかを選択してねb
   <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/eddcad72-3f28-41f6-bdbd-bf32e4dd6f1b" alt="AssigneesとDevelopment" width="700px">
   </p>
-10. （11を行う場合は不要）ターミナル上でコマンドを打ってコミットする場合は、以下のように実行します
+
+#### 9. （10を行う場合は不要）ターミナル上でコマンドを打ってコミットする場合は、以下のように実行します
   <br> コミットメッセージの名前の付け方はルールがあると便利。<a href="https://www.tam-tam.co.jp/tipsnote/program/post16686.html">参考サイト</a>
   <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/0de28e30-51cd-4b8d-ac9a-5758b236affe" alt="AssigneesとDevelopment" width="700px">
   </p>
 
-11. （10を行った場合は不要）VSCode上のSource Controlを開き、```Changes```と書かれた場所のファイル名の横の```+```を選択する。
+#### 10. （9を行った場合は不要）VSCode上のSource Controlを開き、```Changes```と書かれた場所のファイル名の横の```+```を選択する。
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/7b2f2925-23f0-4308-a4d6-0ab533b7d4bc" height="150px">
+  </p>
+  
+  - 変更ファイルを```git add```する。ぶっちゃけこの手順は省いても（後で下のような警告は出てくるけど）OK
+    <br> 下の警告文の意味：「addせずにコミットしようとしているけど、変更ファイル全部ステージに上げて(```git add .```することと同じ。)からコミットしちゃってOKですか？」
     <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/7b2f2925-23f0-4308-a4d6-0ab533b7d4bc" height="150px">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/42c011d1-7d19-4f6f-aaf9-8318594fbc3d" height="150px">
     </p>
-    
-    - 変更ファイルを```git add```する。ぶっちゃけこの手順は省いても（後で下のような警告は出てくるけど）OK
-      <br> 下の警告文の意味：「addせずにコミットしようとしているけど、変更ファイル全部ステージに上げて(```git add .```することと同じ。)からコミットしちゃってOKですか？」
-       <p align="center">
-      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/42c011d1-7d19-4f6f-aaf9-8318594fbc3d" height="150px">
-      </p>
 
-    - その後、コミットメッセージ(ここでは「Add : 花を追加」としている。)を記入して```☑Commit```を選択。
-      <br> コミットメッセージの付け方に注意しよう（詳しくは10の参考サイトをチェック）
+  - その後、コミットメッセージ(ここでは「Add : 花を追加」としている。)を記入して```☑Commit```を選択。
+    <br> コミットメッセージの付け方に注意しよう（詳しくは10の参考サイトをチェック）
     <p align="center">
     <img src="https://github.com/mickylan2367/github_practice/assets/83509964/6ce60e75-adf1-466e-9f9b-83d2cef6b406" height="150px">
     </p>
     
-    - コミットメッセージを記入せずに```☑Commit```ボタンを押してしまうと、以下のようなファイルが開いてコミットできない。
-      <br> この場合はコミットメッセージを記入してからもう一度コミットボタンを押す。
+  - コミットメッセージを記入せずに```☑Commit```ボタンを押してしまうと、以下のようなファイルが開いてコミットできない。
+    <br> この場合はコミットメッセージを記入してからもう一度コミットボタンを押す。
     <p align="center">
     <img src="https://github.com/mickylan2367/github_practice/assets/83509964/9713f8f8-89d6-4d81-ad87-5efe2e380fc7" height="200px">
     </p>
 
-12. (11の続き。10を行った人は飛ばしてください) コミットが行われると下のような画面に代わるので、``` Sync Changes ```を選択する。
-    <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/016c4e1b-5272-4ee2-9d0d-e66466df9540" height="150px">
-    </p>
+#### 11. (10の続き。10を行った人は飛ばしてください) コミットが行われると下のような画面に代わるので、``` Sync Changes ```を選択する。
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/016c4e1b-5272-4ee2-9d0d-e66466df9540" height="150px">
+  </p>
     
-    - ポップアップ画面で表示される```OK```ボタンを押すと、ローカルリポジトリで編集中のブランチから、<b>リモートブランチにある同じ名前のブランチ</b>にプッシュされます。
-    <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/44d28c8c-9c9e-4de9-8dbc-8a6f03c36188" height="120px">
-    </p>
+  - ポップアップ画面で表示される```OK```ボタンを押すと、ローカルリポジトリで編集中のブランチから、<b>リモートブランチにある同じ名前のブランチ</b>にプッシュされます。
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/44d28c8c-9c9e-4de9-8dbc-8a6f03c36188" height="120px">
+  </p>
 
 
 <br>
@@ -367,56 +369,57 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   * 基本的にPull Requestは航海されているプログラムでバグを発見した際、他の人が修正したコードを```remote/origin/main```や```remote/origin/develop```にマージする前に正常に動くコードしてマージできるかを確認するための機能。
   * pythonのライブラリのコードも公開されていて、バグを見つけたらユーザがIssue/Pull Requestsを通してプログラムのバグを報告・修正・加筆することができる。
 
-13. Githubに戻ってpull request上を確認すると、マージされたブランチごとにポップアップが表示されている。
-    <br> ```Compare & pull request```を選択する。
-    <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/4687deea-4f8e-40b1-a37d-914c55f86a27" width="800px">
-    </p>
+#### 12. Githubに戻ってpull request上を確認すると、マージされたブランチごとにポップアップが表示されている。
+  <br> ```Compare & pull request```を選択する。
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/4687deea-4f8e-40b1-a37d-914c55f86a27" width="800px">
+  </p>
 
-14. マージ先のブランチ(```base:```)とマージするブランチ(```compare:```)を選択する。マージできる場合はブランチ選択場所の右に```Able to merge```を緑で表示される。
+#### 13. マージ先のブランチ(```base:```)とマージするブランチ(```compare:```)を選択する。
+  - マージできる場合はブランチ選択場所の右に```Able to merge```を緑で表示される。
     <br> ```Merge pull request```を選択。
     <p align="center">
     <img src="https://github.com/mickylan2367/github_practice/assets/83509964/033b9794-1590-4575-9b71-ae5ed1f9a603" width="800px">
     </p>
-
-    - マージできない場合は同じ場所に```Can't automecally merge.```と赤で表示される。
-      <br> このように表示された場合は上記同様```Merge pull request```を選択した後、手順18へ飛んでください。
+    
+  - マージできない場合は同じ場所に```Can't automecally merge.```と赤で表示される。
+    <br> このように表示された場合は上記同様```Merge pull request```を選択した後、手順18へ飛んでください。
     <p align="center">
     <img src="https://github.com/mickylan2367/github_practice/assets/83509964/591f4cd8-6479-4410-abd6-881513debaf3" width="800px">
     </p>
 
-16. マージできる場合は適宜コミット名を編集し、```Confirm merge```を選択
-    <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/80f8ad05-cfd6-43f9-9922-1adb03390275" height="200px">
-    </p>
+#### 14. マージできる場合は適宜コミット名を編集し、```Confirm merge```を選択
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/80f8ad05-cfd6-43f9-9922-1adb03390275" height="200px">
+  </p>
 
-17. 必要なくなったブランチは削除するため、```Delete Branch```を選択する。
-    <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/fe6d0fee-4794-458a-8c82-e7c336c4d032" width="800px">
-    </p>
+#### 15. 必要なくなったブランチは削除するため、```Delete Branch```を選択する。
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/fe6d0fee-4794-458a-8c82-e7c336c4d032" width="800px">
+  </p>
 
-18. 解決し終わったIssuesは閉じておく。(Issuesに戻って```close issues```を選択)
-    <br> とりあえずこれで一通り編集修了！お疲れ様です。
-    <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/430e3e56-49de-4a02-9dd9-82a0088438f0" height="400px">
-    </p>
+#### 16. 解決し終わったIssuesは閉じておく。(Issuesに戻って```close issues```を選択)
+  とりあえずこれで一通り編集修了！お疲れ様です。
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/430e3e56-49de-4a02-9dd9-82a0088438f0" height="400px">
+  </p>
 
-20. 手順14でマージできないと表示された場合、コンフリクトを解消する必要があります。下の画面から```web editor```を選択
-    <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/7118b28f-9ab6-42ae-bebc-6e3bd2d5fd57" width="700px">
-    </p>
+#### 17. 手順14でマージできないと表示された場合、コンフリクトを解消する必要があります。下の画面から```web editor```を選択
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/7118b28f-9ab6-42ae-bebc-6e3bd2d5fd57" width="700px">
+  </p>
 
-21. どこでコンフリクトが起きているかを表示してくれるので、コードを修正
-    <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/ed5383b9-2ad1-4bd2-842d-4db3271c1fc1" width="600px">
-    </p>
+#### 18. どこでコンフリクトが起きているかを表示してくれるので、コードを修正
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/ed5383b9-2ad1-4bd2-842d-4db3271c1fc1" width="600px">
+  </p>
 
-22. 編集し終わったら```Marked as resoled```を選択。編集結果がマージできそうなら下の画面のように、```Commit merge```と表示されるのでこれを選択
-    <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/82cb7d02-1b66-4c98-95bf-b59b09828a4d" width="600px">
-    </p>
+#### 19. 編集し終わったら```Marked as resoled```を選択。編集結果がマージできそうなら下の画面のように、```Commit merge```と表示されるのでこれを選択
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/82cb7d02-1b66-4c98-95bf-b59b09828a4d" width="600px">
+  </p>
 
-23. コンフリクトが解消できて下の画面のように```Merge Pull Request```が表示されたら、手順15-18へ戻ります。
-    <p align="center">
-    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/06d4689f-d8b3-4579-9838-5ef545bfd547" width="600px">
-    </p>
+#### 20. コンフリクトが解消できて下の画面のように```Merge Pull Request```が表示されたら、手順15-18へ戻ります。
+  <p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/06d4689f-d8b3-4579-9838-5ef545bfd547" width="600px">
+  </p>
