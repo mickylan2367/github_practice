@@ -86,23 +86,23 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
     <li> 
       左のタスクバーからSource Controlを選択。
       <p align="left">
-      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/1d973dfd-4644-4cf9-9b9c-99c5b7a6bdf8" width="90px">
+      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/4cbd0768-fc0a-49b0-82dd-a66c0efe29f4" height="80px">
       </p>
     </li>
     <li>
       上段右から2番目の変なマークを選択。
       <p align="left">
-      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/bef0984c-e27d-4fea-97b7-fd6756327973" width="200px">
+      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/ef9b2af5-3436-4d09-999c-dde1e2d601af" height="80px">
       </p>
     </li>
     <li>
       <br> Git Graphが表示される。
       <p align="left">
-      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/daeaccd5-9152-42b2-9d89-671f7abc074f" height="400px">
+      <img src="https://github.com/mickylan2367/github_practice/assets/83509964/cb2cb721-b5aa-472c-8655-b0ed3a96e410" height="300px">
       </p>
     </li>
   </ol>
-* 上の図のノード(点)がコミットの履歴で、縦の棒が各ブランチ。この図では分岐していたブランチがいったんピンクのブランチ(remotes/develop)に統合され、最終的に青のブランチ(remotes/origin/main)に統合されていく様子を示している。
+* 上の図のノード(点)がコミットの履歴で、縦の棒が各ブランチ。この図では分岐していたブランチがいったん黄緑のブランチ(remotes/develop)に統合され、最終的に青のブランチ(remotes/origin/main)に統合されていく様子を示している。
 
 #### ターミナルでブランチを確認する方法
   gitで管理されているファイル直下に移動し、ターミナルで``` git branch -a ```と打つ。
