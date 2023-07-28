@@ -104,11 +104,13 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
   </ol>
 * 上の図のノード(点)がコミットの履歴で、縦の棒が各ブランチ。この図では分岐していたブランチがいったん黄緑のブランチ(remotes/develop)に統合され、最終的に青のブランチ(remotes/origin/main)に統合されていく様子を示している。
 
+<!--ここから-->
+
 #### ターミナルでブランチを確認する方法
   gitで管理されているファイル直下に移動し、ターミナルで``` git branch -a ```と打つ。
   <br> 現在位置は、先頭に※が付いている + 緑で表示される。下の図の場合はmainブランチにいることが分かる。
   <p align="center">
-  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/b5b0a5d2-8e02-474b-b747-1dcd6af19c73" height="300px">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/1bf0b417-14f1-46d3-a246-4d2e2a8c15a4" height="300px">
   </p>
   
   <br> 因みに、``` git branch ```とだけ打つとローカルリポジトリ（自分のPC）に存在しているブランチ（上の図だと、頭にremotes/originと表記されていないブランチ。）だけが表示される。
@@ -120,7 +122,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 <br>gitはインストール、初期設定済み (git については<a href="https://youtu.be/6SLMB7BPG9E">この動画</a>が分かりやすい)
 <br>また、VSCode上でgithubにログイン済み。サインインしているかはVSCodeの「アカウント」で確認できる。
 <p align="center">
-<img src="https://github.com/mickylan2367/github_practice/assets/83509964/9f829233-9e30-4c6f-b4bd-c47c452e0983" height="200px">
+<img src="https://github.com/mickylan2367/github_practice/assets/83509964/78d8837c-cebf-4c0f-9423-cb98f23312a1" height="200px">
 </p>
 
 <br>
@@ -128,7 +130,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 ## Githubの見方
 <p align="center">
-<img src="https://github.com/mickylan2367/github_practice/assets/83509964/16990050-d72e-4347-bac6-47c9c9e49038" width="800px">
+<img src="https://github.com/mickylan2367/github_practice/assets/83509964/180a9a35-4290-42ee-9c44-4f20e9bdfb9d" width="800px">
 </p>
 
 * 左上の``` main ```はremote/origin/mainブランチにコミットされたプログラムを表示していることを示す。
@@ -138,14 +140,14 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   <br> 下の図の緑の領域(+)は、このコミットによって追加されたコードを示す。
   <br>
   <p align="center">
-  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/12243b75-c76f-4ca7-92b8-921d875f6fce" height="400px">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/c924b3db-75d9-409c-984f-d3c95581488a) height="400px">
   </p>
 * ファイル名をクリックし、History（右端）をクリックすると、そのファイルで行われたコミットの履歴が表示される。
   <br> コミット名をクリックすると、上記同様にコミットの変更したコードを確認できる
-  ![image](https://github.com/mickylan2367/github_practice/assets/83509964/5e25a1ad-3316-4eb4-a566-b297eb9b65d3)
+  ![image](https://github.com/mickylan2367/github_practice/assets/83509964/7ef2ec89-347c-4359-904f-6c27a55b76a8)
 
 #### 他の機能
-![image](https://github.com/mickylan2367/github_practice/assets/83509964/c007689b-012a-417c-a561-fb2b0c28cd78)
+![image](https://github.com/mickylan2367/github_practice/assets/83509964/8a5ed7ad-37ff-430b-86aa-0b598244e177)
 * <>Code: さっき説明した場所。ファイルやブランチ、コミット履歴が確認できる
 * ☉Issues：非同期でチーム開発中に課題を見つけたら、ここに課題を書いて誰が解決するか担当を割り当てる。
   <br> ブランチを作成してコードを編集する。
@@ -174,9 +176,10 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
        git commit -m "コミット名 "：ファイルをコミットする。ステージからローカルリポジトリに変更履歴を保存
        git log : コミットの履歴を見てちゃんとコミットできてるか確認
      ```
-     * ちなみに、```git status ```<<``` git add . ``` <<``` git status ```の順でコマンドを実行すると、``` git add .```を実行する前には``` Changes not staged for commit ```と赤で表示されていたファイルが、実行後には``` Changes to be commited ```として緑で表示されていることが分かる。これはファイルがstageに一時保存されていることを示している。
-       <br> ![image](https://github.com/mickylan2367/github_practice/assets/83509964/25986d22-2254-4016-8652-5a17dfcb1105)
-       <br> ![image](https://github.com/mickylan2367/github_practice/assets/83509964/0149c17b-fd5f-4bc5-b02c-1d8c7f92b079)
+     * ちなみに、```git status ```<<``` git add . ``` <<``` git status ```の順でコマンドを実行すると、``` git add .```を実行する前には``` Changes not staged for commit ```と赤で表示されていたファイルが、実行後には``` Changes to be commited ```として緑で表示されていることが分かる。これはファイルがstageに一時保存されていることを示している.
+       <p align="center">
+          <img src="https://github.com/mickylan2367/github_practice/assets/83509964/919cb9a3-bc4b-4adc-a372-5c7b65773ae0" width="700px">
+        </p>
 
      #### git addや上書き保存で保存してしまった後に、コードを元に戻したい場合。
       * 一度```git add . ```でワークツリーからステージに保存してしまったり、コミットしちゃったけど元に戻したいよというときは```git restore```を使用する。
