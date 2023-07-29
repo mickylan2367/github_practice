@@ -37,13 +37,22 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 <br>
 
 ## 用語解説
+<p align="center">
+<img src="https://github.com/mickylan2367/github_practice/assets/83509964/01a2eaf6-2d1b-430c-ab01-ff494cc04302" width="800px">
+</p>
 <ul>
-  <li>リモートリポジトリ：github上のコードが保存されているURL。</li>
   <li>ローカルリポジトリ：自分のPCで、コードが保存されている場所</li>
   <li>ステージ：ローカルリポジトリで変更保存（コミット）する前に一時的に変更履歴を保存しておく場所</li>
   <li>ワークツリー：編集中のファイルツリー（ローカルPC上）</li>
   <li>コミット：コード変更保存履歴。公式リファレンスによると、変更されたコードだけを保存しているのではなく、すべてのコードをスクリーンショットしノードとして保存しているような感じ？らしい。</li>
-  <li>ブランチ：機能別に編集したりするためにコード開発を分岐させることができる機能。</li>
+  
+  <br>
+  
+  <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/b332a8a5-e23c-4bbf-82ba-cf79c1fb10d0" width="800px">
+  </p>
+  <li>リモートリポジトリ：github上のコードが保存されているURL。</li>
+  <li>ブランチ：機能別にコードを編集したりするために開発工程を分岐させることができる機能。</li>
   <li> remotes/develop ブランチ：製品を公開する前の開発中ブランチ</li>
   <li> remotes/origin/main ブランチ: 製品を公開しているリモートのメインブランチ。タグをつけてpushすると商品感が出る</li>
 </ul>
