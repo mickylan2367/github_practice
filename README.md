@@ -1,6 +1,6 @@
 # github_practice
 Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
-- memo : 面倒くさかったので、Gitの基本操作（VSCode上でのgit操作も含む）は全て3. 概要で説明することにした(;'∀')
+- memo : 面倒くさかったので、Gitの基本操作（VSCode上でのgit操作も含む）は全て<a href="https://github.com/mickylan2367/github_practice/tree/main#概要">概要</a>で説名しています(;'∀')
 - 注意：GitとGithubの練習のために作ったものなので、このコードには特に意味はなく実行してもエラーを吐くと思います
 
 ## 目次
@@ -45,13 +45,20 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
   <li>ステージ：ローカルリポジトリで変更保存（コミット）する前に一時的に変更履歴を保存しておく場所</li>
   <li>ワークツリー：編集中のファイルツリー（ローカルPC上）</li>
   <li>コミット：コード変更保存履歴。公式リファレンスによると、変更されたコードだけを保存しているのではなく、すべてのコードをスクリーンショットしノードとして保存しているような感じ？らしい。</li>
+   <li>リモートリポジトリ：github上のコードが保存されているURL。</li>
   
+  * 下の図は、リモートリポジトリとローカルリポジトリの関係を示したもの。
+    <br> Githubでは、Gitで管理されているファイルをみんなで編集する。
+  * はじめてリモートリポジトリからローカルリポジトリにファイルをコピー(クローンする、という。)する場合は```git clone URL```とコマンドを実行する。
+    （git cloneを行うとローカルリポジトリが作成され、Github上のリモートリポジトリと自分のパソコンのローカルリポジトリが紐づけされる。）
+  <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/a17c7cf2-cc49-4a37-948a-9fa87a9785b5" width="800px">
+  </p>
   <br>
   
   <p align="center">
     <img src="https://github.com/mickylan2367/github_practice/assets/83509964/b332a8a5-e23c-4bbf-82ba-cf79c1fb10d0" width="800px">
   </p>
-  <li>リモートリポジトリ：github上のコードが保存されているURL。</li>
   <li>ブランチ：機能別にコードを編集したりするために開発工程を分岐させることができる機能。</li>
   <li> remotes/develop ブランチ：製品を公開する前の開発中ブランチ</li>
   <li> remotes/origin/main ブランチ: 製品を公開しているリモートのメインブランチ。タグをつけてpushすると商品感が出る</li>
@@ -65,13 +72,15 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 
 #### Git コマンド解説(ターミナルで操作)
 * ``` git add . ``` : ワークツリーからステージへ変更を一時保存
-* ``` git commit -m "コミット名" ``` : ステージからローカルリポジトリへ変更を一時保存
-* ``` git branch "ブランチ名" ``` : ブランチを作成
+* ``` git commit -m コミット名 ``` : ステージからローカルリポジトリへ変更を一時保存
+* ``` git restore ファイル名``` : ワークツリーから指定したファイルの変更を取り消す。
+* ``` git restore --staged ファイル名``` : ステージ上から指定したファイルの変更を取り消す。
+* ``` git branch ブランチ名 ``` : ブランチを作成
   * ``` git branch ``` : ローカルリポジトリに存在するブランチをすべて表示
   * ``` git branch -a ``` : リモートリポジトリ、ローカルリポジトリに存在するすべてのブランチを表示
-  * ``` git checkout -b "ブランチ名" ``` : ブランチを作成してそのブランチへ切り替える
-  * ``` git checkout "ブランチ名" ```: 指定したブランチに切り替える
-  * ``` git branch -d "ブランチ名"　```：指定したブランチを削除
+  * ``` git checkout -b ブランチ名 ``` : ブランチを作成してそのブランチへ切り替える
+  * ``` git checkout ブランチ名 ```: 指定したブランチに切り替える
+  * ``` git branch -d ブランチ名　```：指定したブランチを削除
 * ``` git pull ``` : 以下で紹介するfetchとmergeを一緒に行う。コンフリクトが起きているときはエラーが出ます。
   * ``` git fetch [<options>] [<repository> [<refspec>…]] ```: repositoryで指定されたリポジトリから、ブランチやタグの情報を収集する。
     <br> ex. ``` git fetch origin main ``` : remote/origin/mainからブランチやタグの情報を収集。
@@ -319,7 +328,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 #### 6. 下のようなポップアップ画面が出てくるので、コードをコピーします。
 <p align="center">
-  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/5c816d2b-acd6-4ceb-9765-36b8c5476c57" alt="AssigneesとDevelopment" width="700px">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/5c816d2b-acd6-4ceb-9765-36b8c5476c57" alt="AssigneesとDevelopment" width="500px">
 </p>
 
 #### 7. VSCodeに戻りターミナルを開き、先ほどコピーしたコードを実行
@@ -327,7 +336,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/992f848c-49f5-48a8-be3c-3769bf4b34d0" alt="AssigneesとDevelopment" width="700px">
 </p>
 
-#### 8. ブランチ上でファイルを編集します。
+#### 8. ブランチ上でファイルを編集、Ctrl + Sで上書き保存します
   <br> 注意：次の手順は10（ターミナルでコマンドを直接打つ）か11（VSCodeの機能を使用）のどちらかを選択してねb
   <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/cabfc3c9-c88c-42b6-88a4-96ab206acd20" alt="AssigneesとDevelopment" width="700px">
@@ -410,6 +419,27 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/71c543c4-c2dc-4bff-9263-cf05c1606e81" width="800px">
   </p>
 
+  * ここの段階で```Delete Branch```を選択しても、VSCode上で```git branch -a```で確認すると削除したはずのブランチが表示される場合。
+     <p align="center">
+       <img src="https://github.com/mickylan2367/github_practice/assets/83509964/0da0d303-002b-4df8-a818-78cad8847336" width="500px">
+     </p>
+    
+    * ブランチの最新情報はgit pullしても更新されないので、```git fetch -p```とコマンドを打ってブランチ情報を最新に保つ必要があります。
+    * ローカルリポジトリに残っているブランチはVSCodeのターミナルで```git branch -d ブランチ名```と打って直接消しましょう。
+     <p align="center">
+       <img src="https://github.com/mickylan2367/github_practice/assets/83509964/50ea9d05-bd51-4303-b2a5-12b8e56494db" width="700px">
+     </p>
+
+    1. ```git pull```でファイルを最新にします
+    2. ```git fetch -p```をVSCodeのターミナルで実行します。
+    <p align="center">
+       <img src="https://github.com/mickylan2367/github_practice/assets/83509964/d1454604-af1b-4896-8490-2db43d4d0536" width="700px">
+    </p>
+    3. すると、Github上で削除したブランチがローカルリポジトリ上でも削除されていることが分かる。
+     <p align="center">
+       <img src="https://github.com/mickylan2367/github_practice/assets/83509964/46a7499f-3d29-4d57-93cd-ba171d34a095" width="400px">
+    </p>
+
 #### 16. 解決し終わったIssuesは閉じておく。(Issuesに戻って```close issues```を選択)
   とりあえずこれで一通り編集修了！お疲れ様です。
   <p align="center">
@@ -426,7 +456,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/99b928ba-5af7-4aee-bca8-463a2e22b47c" width="600px">
   </p>
 
-#### 19. 編集し終わったら```Marked as resoled```を選択。編集結果がマージできそうなら下の画面のように、```Commit merge```と表示されるのでこれを選択
+#### 19. 編集し終わったら```Marked as resolved```を選択。編集結果がマージできそうなら下の画面のように、```Commit merge```と表示されるのでこれを選択
   <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/d11c924f-1889-4e09-9451-4423bab54cfb" width="600px">
   </p>
