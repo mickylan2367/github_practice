@@ -248,6 +248,13 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
         ```
       * Personal Access Token：Githubから取ったAccess tokenを入力する
       * user_name: 自分のアカウント名
+
+  5. フェッチとマージを行う。
+     * ```git fetch```でリモートリポジトリの情報を取り込む
+     * ```git merge --allow-unrelated-histories origin/main```を実行して、関連付けられていないブランチ同士をマージする。
+  
+  6. プッシュする。
+     * ```git push origin main```など。
   
   ##### ここで発生したエラーが3個
   ###### エラー1個目
