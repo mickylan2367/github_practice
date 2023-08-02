@@ -282,7 +282,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   ```
   <ul>
     <li>内容：関連付けられていないブランチにはマージできない</li>
-    <li>対処：git merge --allow-unrelated-histories origin/mainで、git pull(= fetch + merge)の二つの機能のうち、mergeのみ再度実行。</li>
+    <li>対処：git fetchのあと、git merge --allow-unrelated-histories origin/mainを実行。git pull(= fetch + merge)の二つの機能のうち、mergeのみ再度実行。</li>
     <li>参考：<a href="https://qiita.com/mei28/items/85bc881ac1f26332ac15">サイト</a></li>
   </ul>
 
