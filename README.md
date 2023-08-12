@@ -186,7 +186,8 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   1. ターミナル(コマンドプロンプト)を開き、github上に載せたいファイル直下で``` git init ```を実行する
      * ```git branch```とターミナルで実行してローカルレポジトリのメインブランチの名前を確認する。
        * もし```On branch main```ではなく```On branch master```だったら、mainにしておくとよい。（名前を統一できるから）
-       * ``` git branch -m 変更するブランチ名 変更後のブランチ名 ```でブランチ名を変更する。 ex. ``` git branch -m master main ```
+       * ``` git branch -m 変更するブランチ名 変更後のブランチ名 ```でブランチ名を変更する
+         * ex. ``` git branch -m master main ```
 
   2. コミットする。
      <br> 必要に応じて``` git status ```で状況を確認しながら、
