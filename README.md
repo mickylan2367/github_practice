@@ -510,3 +510,4 @@ git commit -m commit_name
 ```
 ですべてのファイルをadd、commitする。この状態でpull & pushすればうまくいくかも！
 * 参考サイト：<a href="https://qiita.com/fuwakun/items/d2ea19bf43eda3df0094">"githubでフォルダに矢印が！やっと解決した話"</a>
+* 疑問：別のリポジトリと関連付けたい場合ってどうすればいいんだろう?
