@@ -14,6 +14,7 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#タグの付け方">タグの付け方</a></li>
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Issuesの使い方">Issuesの使い方</a></li>
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Pull Requestの使い方">Pull Requestの使い方</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#フォルダ矢印問題">下層フォルダ矢印問題</a></li>
   </ol>
 
 <br>
@@ -474,3 +475,38 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/90edb4bd-5147-4eae-9f84-3187bf408955" width="600px">
   </p>
+
+
+<br>
+
+## 下層フォルダの矢印問題
+
+* 次のように、紐づけたはずのローカルリポジトリの下のフォルダの中にあるファイルが、pushしてもgithubにアップロードされない問題が発生することがある.
+* ファイル名の前が⇒になっていて、クリックしても
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/f1dbc1c6-40c4-432a-bfe1-29a6d71a9e67" width="600px">
+</p>
+
+この場合、
+> git ls-files
+
+でgitで管理されているフォルダを確認すると、フォルダ下のファイルが管理されていないことが分かるはず。
+```
+$ git rm -rf --cached <対象ファイル or path>
+$ git add <対象ファイル or path>
+ // <対象ファイル or path>部分は、$git ls-files した時に表示されている部分。
+ // --cachedオプションを付けることにより、ファイルを残したまま管理対象から外すことができる。
+```
+
+今回の場合は、
+```
+git rm -rf --chached chaos
+git add chaos\chaos.pde
+```
+を実行する。```git log```でファイルがトラッキングされていることを確認してから、
+```
+git add -A
+git commit -m commit_name
+```
+ですべてのファイルをadd、commitする。この状態でpull & pushすればうまくいくかも！
+* 参考サイト：<a href="https://qiita.com/fuwakun/items/d2ea19bf43eda3df0094">"githubでフォルダに矢印が！やっと解決した話"</a>
