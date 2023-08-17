@@ -14,7 +14,7 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#タグの付け方">タグの付け方</a></li>
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Issuesの使い方">Issuesの使い方</a></li>
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Pull Requestの使い方">Pull Requestの使い方</a></li>
-    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#フォルダ矢印問題">下層フォルダ矢印問題</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#下層フォルダの矢印問題">下層フォルダの矢印問題</a></li>
   </ol>
 
 <br>
