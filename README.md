@@ -501,7 +501,7 @@ $ git add <対象ファイル or path>
 今回の場合は、
 ```
 git rm -rf --chached chaos
-git add chaos\chaos.pde
+git add chaos/chaos.pde
 ```
 を実行する。```git log```でファイルがトラッキングされていることを確認してから、
 ```
