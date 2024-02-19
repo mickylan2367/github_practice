@@ -2,20 +2,20 @@
 
 # スクショをREADME.mdに張る場合
 1. Issuesを開いて、緑のNew Issuesを選択
-<p>
+<p style="text-align:center;border:solid #FFF0F5 1px">
     <img src="image.png" width="800px">
 </p>
 
 2. 適当にタイトルをつけて、スクリーンショットをAdd DiscriptionにDrag and Drop!
-<p>
+<p style="text-align:center;border:solid #FFF0F5 1px">
     <img src="image-1.png" width="800px">
 </p>
 
 3. 画像のアドレスをコピーして、README.mdファイルに使用
-<p>
+<p style="text-align:center;border:solid #FFF0F5 1px">
     <img src="image-2.png" width="800px">
 </p>
-<p>
+<p style="text-align:center;border:solid #FFF0F5 1px">
     <img src="image-3.png" width="800px">
 </p>
 
