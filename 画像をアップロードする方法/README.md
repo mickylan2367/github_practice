@@ -1,4 +1,6 @@
 主な方法は二つです。
+* [スクショをREADME.mdに貼る](#スクショをreadmemdに張る場合)
+* [ファイルにアップロードした写真をREADME.mdで表示する場合](#ファイルにアップロードした写真をreadmemdに貼る場合)
 
 # スクショをREADME.mdに張る場合
 1. Issuesを開いて、緑のNew Issuesを選択
@@ -25,7 +27,6 @@
 ```![alt text](写真の相対パス)```
 
 ```ex . ![alt text](image-2.png)```
-
 これでおk!
 
 
