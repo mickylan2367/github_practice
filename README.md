@@ -1,6 +1,6 @@
 # github_practice
 Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
-- memo : 面倒くさかったので、Gitの基本操作（VSCode上でのgit操作も含む）は全て3. 概要で説明することにした(;'∀')
+- memo : 面倒くさかったので、Gitの基本操作（VSCode上でのgit操作も含む）は全て<a href="https://github.com/mickylan2367/github_practice/tree/main#概要">概要</a>で説名しています(;'∀')
 - 注意：GitとGithubの練習のために作ったものなので、このコードには特に意味はなく実行してもエラーを吐くと思います
 
 ## 目次
@@ -14,6 +14,7 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#タグの付け方">タグの付け方</a></li>
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Issuesの使い方">Issuesの使い方</a></li>
     <li><a href="https://github.com/mickylan2367/github_practice/tree/main#Pull Requestの使い方">Pull Requestの使い方</a></li>
+    <li><a href="https://github.com/mickylan2367/github_practice/tree/main#下層フォルダの矢印問題">下層フォルダの矢印問題</a></li>
   </ol>
 
 <br>
@@ -42,16 +43,23 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 </p>
 <ul>
   <li>ローカルリポジトリ：自分のPCで、コードが保存されている場所</li>
-  <li>ステージ：ローカルリポジトリで変更保存（コミット）する前に一時的に変更履歴を保存しておく場所</li>
+  <li>ステージ：ローカルリポジトリで変更保存（コミット）する前に一時的にファイルの変更を保存しておく場所</li>
   <li>ワークツリー：編集中のファイルツリー（ローカルPC上）</li>
-  <li>コミット：コード変更保存履歴。公式リファレンスによると、変更されたコードだけを保存しているのではなく、すべてのコードをスクリーンショットしノードとして保存しているような感じ？らしい。</li>
+  <li>コミット：コード変更保存ノード。公式リファレンスによると、変更されたコードだけを保存しているのではなく、すべてのコードをスクリーンショットしノードとして保存しているような感じ？らしい。</li>
+   <li>リモートリポジトリ：github上のコードが保存されているURL。</li>
   
+  * 下の図は、リモートリポジトリとローカルリポジトリの関係を示したもの。
+    <br> Githubでは、Gitで管理されているファイルをみんなで編集する。
+  * はじめてリモートリポジトリからローカルリポジトリにファイルをコピー(クローンする、という。)する場合は```git clone URL```とコマンドを実行する。
+    （git cloneを行うとローカルリポジトリが作成され、Github上のリモートリポジトリと自分のパソコンのローカルリポジトリが紐づけされる。）
+  <p align="center">
+    <img src="https://github.com/mickylan2367/github_practice/assets/83509964/a17c7cf2-cc49-4a37-948a-9fa87a9785b5" width="800px">
+  </p>
   <br>
   
   <p align="center">
     <img src="https://github.com/mickylan2367/github_practice/assets/83509964/b332a8a5-e23c-4bbf-82ba-cf79c1fb10d0" width="800px">
   </p>
-  <li>リモートリポジトリ：github上のコードが保存されているURL。</li>
   <li>ブランチ：機能別にコードを編集したりするために開発工程を分岐させることができる機能。</li>
   <li> remotes/develop ブランチ：製品を公開する前の開発中ブランチ</li>
   <li> remotes/origin/main ブランチ: 製品を公開しているリモートのメインブランチ。タグをつけてpushすると商品感が出る</li>
@@ -65,13 +73,15 @@ Githubの使い方の練習memo帳（常に編集中( ´∀｀ )）
 
 #### Git コマンド解説(ターミナルで操作)
 * ``` git add . ``` : ワークツリーからステージへ変更を一時保存
-* ``` git commit -m "コミット名" ``` : ステージからローカルリポジトリへ変更を一時保存
-* ``` git branch "ブランチ名" ``` : ブランチを作成
+* ``` git commit -m コミット名 ``` : ステージからローカルリポジトリへ変更を一時保存
+* ``` git restore ファイル名``` : ワークツリーから指定したファイルの変更を取り消す。
+* ``` git restore --staged ファイル名``` : ステージ上から指定したファイルの変更を取り消す。
+* ``` git branch ブランチ名 ``` : ブランチを作成
   * ``` git branch ``` : ローカルリポジトリに存在するブランチをすべて表示
   * ``` git branch -a ``` : リモートリポジトリ、ローカルリポジトリに存在するすべてのブランチを表示
-  * ``` git checkout -b "ブランチ名" ``` : ブランチを作成してそのブランチへ切り替える
-  * ``` git checkout "ブランチ名" ```: 指定したブランチに切り替える
-  * ``` git branch -d "ブランチ名"　```：指定したブランチを削除
+  * ``` git checkout -b ブランチ名 ``` : ブランチを作成してそのブランチへ切り替える
+  * ``` git checkout ブランチ名 ```: 指定したブランチに切り替える
+  * ``` git branch -d ブランチ名　```：指定したブランチを削除
 * ``` git pull ``` : 以下で紹介するfetchとmergeを一緒に行う。コンフリクトが起きているときはエラーが出ます。
   * ``` git fetch [<options>] [<repository> [<refspec>…]] ```: repositoryで指定されたリポジトリから、ブランチやタグの情報を収集する。
     <br> ex. ``` git fetch origin main ``` : remote/origin/mainからブランチやタグの情報を収集。
@@ -176,7 +186,9 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   #### 自分のPCで行うこと
   1. ターミナル(コマンドプロンプト)を開き、github上に載せたいファイル直下で``` git init ```を実行する
      * ```git branch```とターミナルで実行してローカルレポジトリのメインブランチの名前を確認する。
-       <br> もし```On branch main```ではなく```On branch master```だったら、mainにしておくとよい。（名前を統一できるから）
+       * もし```On branch main```ではなく```On branch master```だったら、mainにしておくとよい。（名前を統一できるから）
+       * ``` git branch -m 変更するブランチ名 変更後のブランチ名 ```でブランチ名を変更する
+         * ex. ``` git branch -m master main ```
 
   2. コミットする。
      <br> 必要に応じて``` git status ```で状況を確認しながら、
@@ -238,6 +250,13 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
         ```
       * Personal Access Token：Githubから取ったAccess tokenを入力する
       * user_name: 自分のアカウント名
+
+  5. フェッチとマージを行う。
+     * ```git fetch```でリモートリポジトリの情報を取り込む
+     * ```git merge --allow-unrelated-histories origin/main```を実行して、関連付けられていないブランチ同士をマージする。
+  
+  6. プッシュする。
+     * ```git push origin main```など。
   
   ##### ここで発生したエラーが3個
   ###### エラー1個目
@@ -272,7 +291,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   ```
   <ul>
     <li>内容：関連付けられていないブランチにはマージできない</li>
-    <li>対処：git merge --allow-unrelated-histories origin/mainで、git pull(= fetch + merge)の二つの機能のうち、mergeのみ再度実行。</li>
+    <li>対処：git fetchのあと、git merge --allow-unrelated-histories origin/mainを実行。git pull(= fetch + merge)の二つの機能のうち、mergeのみ再度実行。</li>
     <li>参考：<a href="https://qiita.com/mei28/items/85bc881ac1f26332ac15">サイト</a></li>
   </ul>
 
@@ -319,7 +338,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
 
 #### 6. 下のようなポップアップ画面が出てくるので、コードをコピーします。
 <p align="center">
-  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/5c816d2b-acd6-4ceb-9765-36b8c5476c57" alt="AssigneesとDevelopment" width="700px">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/5c816d2b-acd6-4ceb-9765-36b8c5476c57" alt="AssigneesとDevelopment" width="500px">
 </p>
 
 #### 7. VSCodeに戻りターミナルを開き、先ほどコピーしたコードを実行
@@ -327,7 +346,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/992f848c-49f5-48a8-be3c-3769bf4b34d0" alt="AssigneesとDevelopment" width="700px">
 </p>
 
-#### 8. ブランチ上でファイルを編集します。
+#### 8. ブランチ上でファイルを編集、Ctrl + Sで上書き保存します
   <br> 注意：次の手順は10（ターミナルでコマンドを直接打つ）か11（VSCodeの機能を使用）のどちらかを選択してねb
   <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/cabfc3c9-c88c-42b6-88a4-96ab206acd20" alt="AssigneesとDevelopment" width="700px">
@@ -410,6 +429,27 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/71c543c4-c2dc-4bff-9263-cf05c1606e81" width="800px">
   </p>
 
+  * ここの段階で```Delete Branch```を選択しても、VSCode上で```git branch -a```で確認すると削除したはずのブランチが表示される場合。
+     <p align="center">
+       <img src="https://github.com/mickylan2367/github_practice/assets/83509964/0da0d303-002b-4df8-a818-78cad8847336" width="500px">
+     </p>
+    
+    * ブランチの最新情報はgit pullしても更新されないので、```git fetch -p```とコマンドを打ってブランチ情報を最新に保つ必要があります。
+    * ローカルリポジトリに残っているブランチはVSCodeのターミナルで```git branch -d ブランチ名```と打って直接消しましょう。
+     <p align="center">
+       <img src="https://github.com/mickylan2367/github_practice/assets/83509964/50ea9d05-bd51-4303-b2a5-12b8e56494db" width="700px">
+     </p>
+
+    1. ```git pull```でファイルを最新にします
+    2. ```git fetch -p```をVSCodeのターミナルで実行します。
+    <p align="center">
+       <img src="https://github.com/mickylan2367/github_practice/assets/83509964/d1454604-af1b-4896-8490-2db43d4d0536" width="700px">
+    </p>
+    3. すると、Github上で削除したブランチがローカルリポジトリ上でも削除されていることが分かる。
+     <p align="center">
+       <img src="https://github.com/mickylan2367/github_practice/assets/83509964/46a7499f-3d29-4d57-93cd-ba171d34a095" width="400px">
+    </p>
+
 #### 16. 解決し終わったIssuesは閉じておく。(Issuesに戻って```close issues```を選択)
   とりあえずこれで一通り編集修了！お疲れ様です。
   <p align="center">
@@ -426,7 +466,7 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/99b928ba-5af7-4aee-bca8-463a2e22b47c" width="600px">
   </p>
 
-#### 19. 編集し終わったら```Marked as resoled```を選択。編集結果がマージできそうなら下の画面のように、```Commit merge```と表示されるのでこれを選択
+#### 19. 編集し終わったら```Marked as resolved```を選択。編集結果がマージできそうなら下の画面のように、```Commit merge```と表示されるのでこれを選択
   <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/d11c924f-1889-4e09-9451-4423bab54cfb" width="600px">
   </p>
@@ -435,3 +475,39 @@ VSCodeで既に作成したコードが手元にある。これをgithub上に�
   <p align="center">
   <img src="https://github.com/mickylan2367/github_practice/assets/83509964/90edb4bd-5147-4eae-9f84-3187bf408955" width="600px">
   </p>
+
+
+<br>
+
+## 下層フォルダの矢印問題
+
+* 次のように、紐づけたはずのローカルリポジトリの下のフォルダの中にあるファイルが、pushしてもgithubにアップロードされない問題が発生することがある.
+* ファイル名の前が⇒になっていて、クリックしても中身が出てこないのだ(;´･ω･)
+<p align="center">
+  <img src="https://github.com/mickylan2367/github_practice/assets/83509964/f1dbc1c6-40c4-432a-bfe1-29a6d71a9e67" width="600px">
+</p>
+
+この場合、
+> git ls-files
+
+でgitで管理されているフォルダを確認すると、フォルダ下のファイルが管理されていないことが分かるはず。
+```
+$ git rm -rf --cached <対象ファイル or path>
+$ git add <対象ファイル or path>
+ // <対象ファイル or path>部分は、$git ls-files した時に表示されている部分。
+ // --cachedオプションを付けることにより、ファイルを残したまま管理対象から外すことができる。
+```
+
+今回の場合は、
+```
+git rm -rf --chached chaos
+git add chaos/chaos.pde
+```
+を実行する。```git log```でファイルがトラッキングされていることを確認してから、
+```
+git add -A
+git commit -m commit_name
+```
+ですべてのファイルをadd、commitする。この状態でpull & pushすればうまくいくかも！
+* 参考サイト：<a href="https://qiita.com/fuwakun/items/d2ea19bf43eda3df0094">"githubでフォルダに矢印が！やっと解決した話"</a>
+* 疑問：別のリポジトリと関連付けたい場合ってどうすればいいんだろう?
